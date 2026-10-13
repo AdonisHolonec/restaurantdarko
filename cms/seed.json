@@ -1,0 +1,1222 @@
+{
+  "program": {
+    "zilnic": "08:00 — 00:00",
+    "bucatarie": "10:00 — 22:00",
+    "descriere": "Zilnic, 08:00 — 00:00. Bucătăria gătește între 10:00 și 22:00, inclusiv sâmbăta și duminica.",
+    "telefonOre": "Zilnic, între 08:00 și 22:00"
+  },
+  "contact": {
+    "telefon": "0740 306 758",
+    "adresa": "Strada Sighișoara 6",
+    "oras": "Arad, România",
+    "facebook": "https://www.facebook.com/RestaurantOrizontArad"
+  },
+  "menu": [
+    {
+      "id": "mic-dejun",
+      "name": "Mic dejun",
+      "note": "Servit de la 08:00",
+      "hidden": false,
+      "ordine": 10,
+      "items": [
+        {
+          "n": "Meniu ouă ochiuri cu bacon, roșii și telemea",
+          "g": "250 g",
+          "p": "25",
+          "hidden": false
+        },
+        {
+          "n": "Omletă cu cașcaval și ciuperci",
+          "g": "250 g",
+          "p": "25",
+          "hidden": false
+        },
+        {
+          "n": "Omletă cu cașcaval și șuncă",
+          "g": "250 g",
+          "p": "25",
+          "hidden": false
+        },
+        {
+          "n": "Omletă simplă cu telemea și roșii",
+          "g": "200 g",
+          "p": "19",
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "id": "aperitive",
+      "name": "Aperitive",
+      "note": "",
+      "hidden": false,
+      "ordine": 20,
+      "items": [
+        {
+          "n": "Bruschete cu somon",
+          "g": "250 g",
+          "p": "30",
+          "hidden": false
+        },
+        {
+          "n": "Bruschete cu ton",
+          "g": "250 g",
+          "p": "30",
+          "hidden": false
+        },
+        {
+          "n": "Bruschete cu prosciutto",
+          "g": "250 g",
+          "p": "30",
+          "hidden": false
+        },
+        {
+          "n": "Bruschete cu feta și roșii",
+          "g": "250 g",
+          "p": "30",
+          "hidden": false
+        },
+        {
+          "n": "Bruschete cu pastă de jumări",
+          "g": "250 g",
+          "p": "27",
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "id": "ciorbe",
+      "name": "Ciorbe",
+      "note": "Pâine, smântână și ardei iute incluse în preț",
+      "hidden": false,
+      "ordine": 30,
+      "items": [
+        {
+          "n": "Ciorbă de burtă",
+          "g": "400 g",
+          "p": "32",
+          "hidden": false
+        },
+        {
+          "n": "Ciorbă țărănească de vacuță",
+          "g": "400 g",
+          "p": "32",
+          "hidden": false
+        },
+        {
+          "n": "Ciorbă de perișoare",
+          "g": "400 g",
+          "p": "30",
+          "hidden": false
+        },
+        {
+          "n": "Ciorbă rădăuțeană",
+          "g": "400 g",
+          "p": "30",
+          "hidden": false
+        },
+        {
+          "n": "Ciorbă de pui a la grec",
+          "g": "400 g",
+          "p": "30",
+          "hidden": false
+        },
+        {
+          "n": "Supă de pui",
+          "g": "400 g",
+          "p": "25",
+          "hidden": false
+        },
+        {
+          "n": "Ciorbă de legume",
+          "g": "400 g",
+          "p": "25",
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "id": "specialitati",
+      "name": "Specialitatea casei",
+      "note": "",
+      "hidden": false,
+      "ordine": 40,
+      "items": [
+        {
+          "n": "Creveți în tavă de lut, serviți cu baghete",
+          "g": "350 g",
+          "p": "68",
+          "hidden": false
+        },
+        {
+          "n": "Coaste de porc cu cartofi wedges și sos sweet chilli",
+          "g": "700 g",
+          "p": "65",
+          "hidden": false
+        },
+        {
+          "n": "Ciolan cu fasole și ceapă roșie",
+          "g": "800 g",
+          "p": "65",
+          "hidden": false
+        },
+        {
+          "n": "Carne de scoici în sos mediteranean, unt și usturoi",
+          "g": "300 g",
+          "p": "59",
+          "hidden": false
+        },
+        {
+          "n": "Disc de berbecuț cu orez",
+          "g": "500 g",
+          "p": "58",
+          "hidden": false
+        },
+        {
+          "n": "Mușchiuleț de porc cu sos porcini",
+          "g": "450 g",
+          "p": "57",
+          "hidden": false
+        },
+        {
+          "n": "Disc de vită cu orez",
+          "g": "500 g",
+          "p": "55",
+          "hidden": false
+        },
+        {
+          "n": "Pui Sichuan cu orez",
+          "g": "500 g",
+          "p": "55",
+          "hidden": false
+        },
+        {
+          "n": "Gulaș de vită cu mămăligă",
+          "g": "400 g",
+          "p": "50",
+          "hidden": false
+        },
+        {
+          "n": "Disc de pui cu orez",
+          "g": "500 g",
+          "p": "45",
+          "hidden": false
+        },
+        {
+          "n": "Disc ceafă de porc cu orez",
+          "g": "500 g",
+          "p": "45",
+          "hidden": false
+        },
+        {
+          "n": "Vită în tavă de lut la cuptor, cu cartofi",
+          "g": "550 g",
+          "p": "45",
+          "hidden": false
+        },
+        {
+          "n": "Ciulama de pui cu ciuperci și mămăligă",
+          "g": "500 g",
+          "p": "45",
+          "hidden": false
+        },
+        {
+          "n": "Sarmale cu mămăliguță și bacon, 5 buc",
+          "g": "500 g",
+          "p": "40",
+          "hidden": false
+        },
+        {
+          "n": "Mămăliguță cu brânză, smântână, bacon și ou",
+          "g": "400 g",
+          "p": "35",
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "id": "fel-principal",
+      "name": "Fel principal",
+      "note": "",
+      "hidden": false,
+      "ordine": 50,
+      "items": [
+        {
+          "n": "Mușchiuleț de porc cu cartofi și sos de piper verde",
+          "g": "450 g",
+          "p": "57",
+          "hidden": false
+        },
+        {
+          "n": "Șnițel de porc sau pui cu cartofi",
+          "g": "450 g",
+          "p": "45",
+          "hidden": false
+        },
+        {
+          "n": "Aripioare picante cu cartofi",
+          "g": "500 g",
+          "p": "42",
+          "hidden": false
+        },
+        {
+          "n": "Crispy pui cu cartofi prăjiți",
+          "g": "450 g",
+          "p": "40",
+          "hidden": false
+        },
+        {
+          "n": "Ceafă la tigaie pe pat de legume",
+          "g": "400 g",
+          "p": "39",
+          "hidden": false
+        },
+        {
+          "n": "Cașcaval pane cu cartofi prăjiți",
+          "g": "350 g",
+          "p": "35",
+          "hidden": false
+        },
+        {
+          "n": "Meniu mititei, 3 buc, cu muștar",
+          "g": "250 g",
+          "p": "28",
+          "hidden": false
+        },
+        {
+          "n": "Ceafă de porc la grătar",
+          "g": "200 g",
+          "p": "28",
+          "hidden": false
+        },
+        {
+          "n": "Piept de pui la grătar",
+          "g": "200 g",
+          "p": "28",
+          "hidden": false
+        },
+        {
+          "n": "Pulpă dezosată la grătar",
+          "g": "200 g",
+          "p": "28",
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "id": "platouri-meniu",
+      "name": "Platouri",
+      "note": "",
+      "hidden": false,
+      "ordine": 60,
+      "items": [
+        {
+          "n": "Platou haiducesc, 6 persoane",
+          "g": "5 kg",
+          "p": "360",
+          "hidden": false
+        },
+        {
+          "n": "Platoul casei, 4 persoane",
+          "g": "2,6 kg",
+          "p": "260",
+          "hidden": false
+        },
+        {
+          "n": "Tava Orizont, 2 persoane",
+          "g": "1,4 kg",
+          "p": "110",
+          "hidden": false
+        },
+        {
+          "n": "Platou țărănesc",
+          "g": "700 g",
+          "p": "65",
+          "hidden": false
+        },
+        {
+          "n": "Mix grill",
+          "g": "650 g",
+          "p": "58",
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "id": "pizza",
+      "name": "Pizza",
+      "note": "Blat făcut în casă",
+      "hidden": false,
+      "ordine": 70,
+      "items": [
+        {
+          "n": "Quattro formaggi — gorgonzola, brie, parmezan",
+          "g": "650 g",
+          "p": "42",
+          "hidden": false
+        },
+        {
+          "n": "Orizont — șuncă, ciuperci, bacon, salam, porumb",
+          "g": "690 g",
+          "p": "39",
+          "hidden": false
+        },
+        {
+          "n": "Țărănească — salam, bacon, cârnăciori, ceapă",
+          "g": "700 g",
+          "p": "39",
+          "hidden": false
+        },
+        {
+          "n": "Crudo e rucola — prosciutto, rucola, parmezan",
+          "g": "600 g",
+          "p": "39",
+          "hidden": false
+        },
+        {
+          "n": "Pui — piept de pui, ardei gras",
+          "g": "650 g",
+          "p": "39",
+          "hidden": false
+        },
+        {
+          "n": "Capricciosa — șuncă, ciuperci, măsline, anghinare",
+          "g": "650 g",
+          "p": "37",
+          "hidden": false
+        },
+        {
+          "n": "Diavola — salam picant, ardei iute",
+          "g": "600 g",
+          "p": "37",
+          "hidden": false
+        },
+        {
+          "n": "Bambino — șuncă, porumb",
+          "g": "600 g",
+          "p": "34",
+          "hidden": false
+        },
+        {
+          "n": "Vegetariană — ciuperci, dovlecel, vinete, măsline",
+          "g": "600 g",
+          "p": "34",
+          "hidden": false
+        },
+        {
+          "n": "Margherita",
+          "g": "400 g",
+          "p": "25",
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "id": "paste",
+      "name": "Paste",
+      "note": "",
+      "hidden": false,
+      "ordine": 80,
+      "items": [
+        {
+          "n": "Gamberi e salmone — creveți, somon, sos rose",
+          "g": "350 g",
+          "p": "52",
+          "hidden": false
+        },
+        {
+          "n": "Gamberi e zucchini — creveți, sos rose, usturoi",
+          "g": "350 g",
+          "p": "49",
+          "hidden": false
+        },
+        {
+          "n": "Orizont — piept de pui, sos rose, ciuperci, măsline",
+          "g": "350 g",
+          "p": "39",
+          "hidden": false
+        },
+        {
+          "n": "Carbonara — smântână, pancetta afumată, ou",
+          "g": "350 g",
+          "p": "39",
+          "hidden": false
+        },
+        {
+          "n": "Quattro formaggi — cedar, mozzarella, camembert, gorgonzola",
+          "g": "350 g",
+          "p": "39",
+          "hidden": false
+        },
+        {
+          "n": "Bologneze — ragu de vită, sos de roșii",
+          "g": "350 g",
+          "p": "39",
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "id": "burger",
+      "name": "Burger",
+      "note": "Toți burgerii se servesc cu cartofi",
+      "hidden": false,
+      "ordine": 90,
+      "items": [
+        {
+          "n": "Burger Orizont — vită, cedar, ceapă caramelizată, bacon",
+          "g": "500 g",
+          "p": "50",
+          "hidden": false
+        },
+        {
+          "n": "Cheeseburger — vită, cedar, cașcaval",
+          "g": "500 g",
+          "p": "50",
+          "hidden": false
+        },
+        {
+          "n": "Burger crispy — piept de pui în fulgi de porumb",
+          "g": "450 g",
+          "p": "50",
+          "hidden": false
+        },
+        {
+          "n": "Burger halloumi",
+          "g": "460 g",
+          "p": "50",
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "id": "salate",
+      "name": "Salate",
+      "note": "",
+      "hidden": false,
+      "ordine": 100,
+      "items": [
+        {
+          "n": "Salata Caesar — pui, parmezan, bacon, crutoane",
+          "g": "380 g",
+          "p": "39",
+          "hidden": false
+        },
+        {
+          "n": "Salata crispy, servită cu baghetă",
+          "g": "420 g",
+          "p": "39",
+          "hidden": false
+        },
+        {
+          "n": "Salata grecească, servită cu baghetă",
+          "g": "400 g",
+          "p": "39",
+          "hidden": false
+        },
+        {
+          "n": "Salată de roșii cu brânză feta",
+          "g": "250 g",
+          "p": "19",
+          "hidden": false
+        },
+        {
+          "n": "Salată de ardei copți",
+          "g": "200 g",
+          "p": "15",
+          "hidden": false
+        },
+        {
+          "n": "Salată coleslaw",
+          "g": "200 g",
+          "p": "15",
+          "hidden": false
+        },
+        {
+          "n": "Salată mixtă",
+          "g": "200 g",
+          "p": "12",
+          "hidden": false
+        },
+        {
+          "n": "Salată de murături de sezon",
+          "g": "200 g",
+          "p": "12",
+          "hidden": false
+        },
+        {
+          "n": "Salată de varză",
+          "g": "200 g",
+          "p": "9",
+          "hidden": false
+        },
+        {
+          "n": "Salată de ceapă roșie cu pătrunjel",
+          "g": "200 g",
+          "p": "9",
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "id": "garnituri",
+      "name": "Garnituri",
+      "note": "",
+      "hidden": false,
+      "ordine": 110,
+      "items": [
+        {
+          "n": "Cartofi cu sos cheddar și bacon",
+          "g": "250 g",
+          "p": "35",
+          "hidden": false
+        },
+        {
+          "n": "Legume la grătar",
+          "g": "250 g",
+          "p": "19",
+          "hidden": false
+        },
+        {
+          "n": "Cartofi aurii",
+          "g": "200 g",
+          "p": "15",
+          "hidden": false
+        },
+        {
+          "n": "Cartofi wedges",
+          "g": "200 g",
+          "p": "15",
+          "hidden": false
+        },
+        {
+          "n": "Orez cu tăiței și unt",
+          "g": "200 g",
+          "p": "15",
+          "hidden": false
+        },
+        {
+          "n": "Iahnie de fasole",
+          "g": "350 g",
+          "p": "15",
+          "hidden": false
+        },
+        {
+          "n": "Cartofi piure",
+          "g": "200 g",
+          "p": "12",
+          "hidden": false
+        },
+        {
+          "n": "Cartofi natur",
+          "g": "200 g",
+          "p": "12",
+          "hidden": false
+        },
+        {
+          "n": "Cartofi prăjiți",
+          "g": "200 g",
+          "p": "12",
+          "hidden": false
+        },
+        {
+          "n": "Mămăligă",
+          "g": "200 g",
+          "p": "10",
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "id": "sosuri",
+      "name": "Sosuri",
+      "note": "",
+      "hidden": false,
+      "ordine": 120,
+      "items": [
+        {
+          "n": "Sos gorgonzola",
+          "g": "150 g",
+          "p": "17",
+          "hidden": false
+        },
+        {
+          "n": "Sos piper verde",
+          "g": "150 g",
+          "p": "17",
+          "hidden": false
+        },
+        {
+          "n": "Sos cedar",
+          "g": "150 g",
+          "p": "17",
+          "hidden": false
+        },
+        {
+          "n": "Sos tzatziki",
+          "g": "150 g",
+          "p": "15",
+          "hidden": false
+        },
+        {
+          "n": "Sos de usturoi cu smântână",
+          "g": "150 g",
+          "p": "15",
+          "hidden": false
+        },
+        {
+          "n": "Sos de ciuperci",
+          "g": "150 g",
+          "p": "15",
+          "hidden": false
+        },
+        {
+          "n": "Sos 1000 de insule",
+          "g": "150 g",
+          "p": "15",
+          "hidden": false
+        },
+        {
+          "n": "Sos mujdei",
+          "g": "100 g",
+          "p": "6",
+          "hidden": false
+        },
+        {
+          "n": "Smântână",
+          "g": "40 g",
+          "p": "6",
+          "hidden": false
+        },
+        {
+          "n": "Ketchup",
+          "g": "40 g",
+          "p": "5",
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "id": "desert",
+      "name": "Desert",
+      "note": "",
+      "hidden": false,
+      "ordine": 130,
+      "items": [
+        {
+          "n": "Papanași cu afine și smântână",
+          "g": "250 g",
+          "p": "32",
+          "hidden": false
+        },
+        {
+          "n": "Clătite cu brânză dulce și sos de vanilie",
+          "g": "2 buc",
+          "p": "28",
+          "hidden": false
+        },
+        {
+          "n": "Clătite cu Nutella și sos de vanilie",
+          "g": "2 buc",
+          "p": "26",
+          "hidden": false
+        },
+        {
+          "n": "Clătite cu banane, Nutella și biscuite",
+          "g": "2 buc",
+          "p": "26",
+          "hidden": false
+        },
+        {
+          "n": "Clătite cu Nutella",
+          "g": "2 buc",
+          "p": "19",
+          "hidden": false
+        },
+        {
+          "n": "Clătite cu gem",
+          "g": "2 buc",
+          "p": "19",
+          "hidden": false
+        },
+        {
+          "n": "Tiramisu",
+          "g": "130 g",
+          "p": "18",
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "id": "limonade",
+      "name": "Limonade",
+      "note": "Stoarse la comandă",
+      "hidden": false,
+      "ordine": 140,
+      "items": [
+        {
+          "n": "Fructul pasiunii",
+          "g": "450 ml",
+          "p": "23",
+          "hidden": false
+        },
+        {
+          "n": "Căpșuni",
+          "g": "450 ml",
+          "p": "23",
+          "hidden": false
+        },
+        {
+          "n": "Fructe de pădure",
+          "g": "450 ml",
+          "p": "23",
+          "hidden": false
+        },
+        {
+          "n": "Mango",
+          "g": "450 ml",
+          "p": "23",
+          "hidden": false
+        },
+        {
+          "n": "Kiwi",
+          "g": "450 ml",
+          "p": "23",
+          "hidden": false
+        },
+        {
+          "n": "Pepene galben",
+          "g": "450 ml",
+          "p": "23",
+          "hidden": false
+        },
+        {
+          "n": "Clasică",
+          "g": "450 ml",
+          "p": "20",
+          "hidden": false
+        },
+        {
+          "n": "Mentă",
+          "g": "450 ml",
+          "p": "20",
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "id": "cafea",
+      "name": "Cafea și lapte",
+      "note": "",
+      "hidden": false,
+      "ordine": 150,
+      "items": [
+        {
+          "n": "Milkshake — vanilie, căpșuni, banane sau ciocolată",
+          "g": "200 ml",
+          "p": "18",
+          "hidden": false
+        },
+        {
+          "n": "Ciocolată caldă, neagră sau albă",
+          "g": "200 ml",
+          "p": "18",
+          "hidden": false
+        },
+        {
+          "n": "Frappé",
+          "g": "200 ml",
+          "p": "15",
+          "hidden": false
+        },
+        {
+          "n": "Latte macchiato",
+          "g": "200 ml",
+          "p": "14",
+          "hidden": false
+        },
+        {
+          "n": "Cappuccino",
+          "g": "80 ml",
+          "p": "12",
+          "hidden": false
+        },
+        {
+          "n": "Cappuccino vienez",
+          "g": "80 ml",
+          "p": "12",
+          "hidden": false
+        },
+        {
+          "n": "Espresso Columbia",
+          "g": "40 ml",
+          "p": "12",
+          "hidden": false
+        },
+        {
+          "n": "Ceai cald",
+          "g": "250 ml",
+          "p": "12",
+          "hidden": false
+        },
+        {
+          "n": "Espresso",
+          "g": "40 ml",
+          "p": "10",
+          "hidden": false
+        },
+        {
+          "n": "Extra aromă",
+          "g": "10 ml",
+          "p": "2",
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "id": "racoritoare",
+      "name": "Fresh și răcoritoare",
+      "note": "",
+      "hidden": false,
+      "ordine": 160,
+      "items": [
+        {
+          "n": "Fresh de portocale",
+          "g": "300 ml",
+          "p": "22",
+          "hidden": false
+        },
+        {
+          "n": "Fresh de grapefruit",
+          "g": "300 ml",
+          "p": "22",
+          "hidden": false
+        },
+        {
+          "n": "Red Bull",
+          "g": "250 ml",
+          "p": "15",
+          "hidden": false
+        },
+        {
+          "n": "Carpatica plată sau carbogazoasă",
+          "g": "750 ml",
+          "p": "15",
+          "hidden": false
+        },
+        {
+          "n": "Prigat — portocale, kiwi, piersici, căpșuni-banane",
+          "g": "250 ml",
+          "p": "13",
+          "hidden": false
+        },
+        {
+          "n": "Pepsi vintage",
+          "g": "250 ml",
+          "p": "12",
+          "hidden": false
+        },
+        {
+          "n": "Pepsi, Mirinda, 7Up, Evervess",
+          "g": "250 ml",
+          "p": "11",
+          "hidden": false
+        },
+        {
+          "n": "Carpatica plată sau carbogazoasă",
+          "g": "330 ml",
+          "p": "10",
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "id": "bere",
+      "name": "Bere",
+      "note": "",
+      "hidden": false,
+      "ordine": 170,
+      "items": [
+        {
+          "n": "Paulaner 5,5%",
+          "g": "500 ml",
+          "p": "18",
+          "hidden": false
+        },
+        {
+          "n": "Corona 4,5%",
+          "g": "355 ml",
+          "p": "15",
+          "hidden": false
+        },
+        {
+          "n": "Draft Carlsberg 5,2%",
+          "g": "400 ml",
+          "p": "15",
+          "hidden": false
+        },
+        {
+          "n": "Carlsberg 5,2%",
+          "g": "330 / 500 ml",
+          "p": "14",
+          "hidden": false
+        },
+        {
+          "n": "Cidru Somersby 4,5%",
+          "g": "330 ml",
+          "p": "14",
+          "hidden": false
+        },
+        {
+          "n": "Draft Bucur 5,2%",
+          "g": "400 ml",
+          "p": "14",
+          "hidden": false
+        },
+        {
+          "n": "Bucur 5,2%",
+          "g": "350 ml",
+          "p": "13",
+          "hidden": false
+        },
+        {
+          "n": "Tuborg 5,2%",
+          "g": "330 / 500 ml",
+          "p": "12",
+          "hidden": false
+        },
+        {
+          "n": "Tuborg fără alcool",
+          "g": "330 ml",
+          "p": "12",
+          "hidden": false
+        },
+        {
+          "n": "Draft Tuborg 5,2%",
+          "g": "400 ml",
+          "p": "12",
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "id": "cocktail",
+      "name": "Cocktail",
+      "note": "",
+      "hidden": false,
+      "ordine": 180,
+      "items": [
+        {
+          "n": "Campari orange",
+          "g": "300 ml",
+          "p": "33",
+          "hidden": false
+        },
+        {
+          "n": "Spritz Aperol",
+          "g": "250 ml",
+          "p": "30",
+          "hidden": false
+        },
+        {
+          "n": "Hugo",
+          "g": "200 ml",
+          "p": "30",
+          "hidden": false
+        },
+        {
+          "n": "Gin tonic",
+          "g": "300 ml",
+          "p": "30",
+          "hidden": false
+        },
+        {
+          "n": "Cuba libre",
+          "g": "300 ml",
+          "p": "30",
+          "hidden": false
+        },
+        {
+          "n": "Sex on the beach",
+          "g": "300 ml",
+          "p": "30",
+          "hidden": false
+        },
+        {
+          "n": "Screwdriver",
+          "g": "300 ml",
+          "p": "30",
+          "hidden": false
+        },
+        {
+          "n": "Green apple",
+          "g": "200 ml",
+          "p": "25",
+          "hidden": false
+        },
+        {
+          "n": "Safe sex",
+          "g": "200 ml",
+          "p": "25",
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "id": "vinuri",
+      "name": "Vinuri",
+      "note": "Domeniile Sâmburești și Chateau Valvis",
+      "hidden": false,
+      "ordine": 190,
+      "items": [
+        {
+          "n": "Prosecco extra dry 11%",
+          "g": "750 ml",
+          "p": "160",
+          "hidden": false
+        },
+        {
+          "n": "Chateau Valvis — Chardonnay, Rosé sau Merlot",
+          "g": "750 ml",
+          "p": "120",
+          "hidden": false
+        },
+        {
+          "n": "Dradara Fetească Neagră & Merlot",
+          "g": "750 ml",
+          "p": "120",
+          "hidden": false
+        },
+        {
+          "n": "Prosecco 10,5%",
+          "g": "750 ml",
+          "p": "90",
+          "hidden": false
+        },
+        {
+          "n": "Carpathia — Chardonnay sau Fetească Neagră",
+          "g": "750 ml",
+          "p": "80",
+          "hidden": false
+        },
+        {
+          "n": "Miranic Cabernet Sauvignon",
+          "g": "750 ml",
+          "p": "70",
+          "hidden": false
+        },
+        {
+          "n": "Sâmburești — Cabernet, Chardonnay sau Rozé",
+          "g": "750 ml",
+          "p": "65",
+          "hidden": false
+        },
+        {
+          "n": "Vin la carafă, alb, roșu sau rosé",
+          "g": "1000 ml",
+          "p": "65",
+          "hidden": false
+        },
+        {
+          "n": "Vin la carafă, alb, roșu sau rosé",
+          "g": "500 ml",
+          "p": "35",
+          "hidden": false
+        },
+        {
+          "n": "Vin la pahar",
+          "g": "200 ml",
+          "p": "18",
+          "hidden": false
+        },
+        {
+          "n": "Vin fiert",
+          "g": "250 ml",
+          "p": "18",
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "id": "spirtoase",
+      "name": "Băuturi spirtoase",
+      "note": "",
+      "hidden": false,
+      "ordine": 200,
+      "items": [
+        {
+          "n": "Hennessy 40%",
+          "g": "50 ml",
+          "p": "35",
+          "hidden": false
+        },
+        {
+          "n": "Courvoisier 40%",
+          "g": "50 ml",
+          "p": "35",
+          "hidden": false
+        },
+        {
+          "n": "Chivas Regal 12 ani",
+          "g": "50 ml",
+          "p": "28",
+          "hidden": false
+        },
+        {
+          "n": "Bacardi Carta Blanca sau Black",
+          "g": "50 ml",
+          "p": "22",
+          "hidden": false
+        },
+        {
+          "n": "Jack Daniel’s 40%",
+          "g": "50 ml",
+          "p": "20",
+          "hidden": false
+        },
+        {
+          "n": "Coniacul casei 40%",
+          "g": "50 ml",
+          "p": "20",
+          "hidden": false
+        },
+        {
+          "n": "Johnnie Walker 40%",
+          "g": "50 ml",
+          "p": "19",
+          "hidden": false
+        },
+        {
+          "n": "Campari 25%",
+          "g": "50 ml",
+          "p": "18",
+          "hidden": false
+        },
+        {
+          "n": "Jidvei, Martini, Sheridan’s, Captain Morgan, Wembley",
+          "g": "50 ml",
+          "p": "17",
+          "hidden": false
+        },
+        {
+          "n": "Absolut, Stalinskaya, Finlandia, Alexandrion, J&B",
+          "g": "50 ml",
+          "p": "15",
+          "hidden": false
+        },
+        {
+          "n": "Ballantine’s, Teacher’s, Jägermeister, Unicum",
+          "g": "50 ml",
+          "p": "15",
+          "hidden": false
+        },
+        {
+          "n": "Țuică de prune 52%, lichior de vișine",
+          "g": "50 ml",
+          "p": "15",
+          "hidden": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Restaurant Orizont Arad — bucătărie românească, pizza și fructe de mare</title>
+<meta name="description" content="Restaurant de familie în Arad, Strada Sighișoara 6. Bucătărie românească, pizza, paste și fructe de mare, în porții generoase. Deschis zilnic 08:00 — 00:00. Rezervări: 0740 306 758.">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#0F1317">
+<link rel="canonical" href="https://restaurantdarko.site/">
+<link rel="icon" href="assets/favicon.png" type="image/png" sizes="any">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:type" content="restaurant">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:site_name" content="Restaurant Orizont">
+<meta property="og:title" content="Restaurant Orizont Arad — mâncare adevărată, în porții pe măsură">
+<meta property="og:description" content="Bucătărie românească, pizza, paste și fructe de mare. Restaurant de familie în Arad, deschis zilnic 08:00 — 00:00.">
+<meta property="og:url" content="https://restaurantdarko.site/">
+<meta property="og:image" content="https://restaurantdarko.site/assets/og-orizont.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Sala restaurantului Orizont, seara">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "@id": "https://restaurantdarko.site/#restaurant",
+  "name": "Restaurant Orizont",
+  "url": "https://restaurantdarko.site/",
+  "telephone": "+40740306758",
+  "image": "https://restaurantdarko.site/assets/og-orizont.jpg",
+  "priceRange": "$$",
+  "currenciesAccepted": "RON",
+  "servesCuisine": ["Românească", "Italiană", "Fructe de mare"],
+  "hasMenu": "https://restaurantdarko.site/#meniu-complet",
+  "acceptsReservations": "True",
+  "foundingDate": "2010",
+  "sameAs": ["https://www.facebook.com/RestaurantOrizontArad"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Strada Sighișoara 6",
+    "addressLocality": "Arad",
+    "addressRegion": "Arad",
+    "postalCode": "310000",
+    "addressCountry": "RO"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 46.169590, "longitude": 21.351801 },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "08:00",
+    "closes": "00:00"
+  }]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet">
+<style>
+:root{--ink:#16191C;--deep:#0F1317;--cream:#F5F1E8;--paper:#FBF9F4;--muted:#6E675C;--line:#DED6C6;--accent:#A65C2A;--pad:clamp(24px,6vw,116px)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:"Instrument Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased;text-wrap:pretty}
+a{color:inherit;text-decoration:none;transition:color 400ms ease,opacity 400ms ease}
+a:hover{color:var(--accent)}
+::selection{background:#E7DAC6}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+[data-skip]{position:absolute;left:-9999px;top:0;z-index:90}
+[data-skip]:focus{left:var(--pad);top:14px;padding:14px 22px;background:var(--cream);color:var(--ink);font-size:13px;letter-spacing:0.12em;text-transform:uppercase}
+@keyframes orizontIn{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+@supports (animation-timeline:view()){
+  [data-reveal]{animation:orizontIn linear both;animation-timeline:view();animation-range:entry 2% cover 20%}
+  html[data-motion="off"] [data-reveal]{animation:none}
+}
+@keyframes orizontPulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--accent) 52%,transparent)}62%{box-shadow:0 0 0 17px color-mix(in srgb,var(--accent) 0%,transparent)}100%{box-shadow:0 0 0 0 color-mix(in srgb,var(--accent) 0%,transparent)}}
+@keyframes orizontPulseLight{0%{box-shadow:0 0 0 0 rgba(245,241,232,0.42)}62%{box-shadow:0 0 0 14px rgba(245,241,232,0)}100%{box-shadow:0 0 0 0 rgba(245,241,232,0)}}
+@keyframes orizontPulseGreen{0%{box-shadow:0 0 0 0 rgba(14,122,60,0.5)}62%{box-shadow:0 0 0 17px rgba(14,122,60,0)}100%{box-shadow:0 0 0 0 rgba(14,122,60,0)}}
+html[data-motion="off"] [data-pulse]{animation:none}
+@media (prefers-reduced-motion:reduce){[data-pulse]{animation:none}}
+
+/* --- adaptare pentru tabletă și telefon (nu se poate exprima inline) --- */
+@media (max-width:1060px){
+  [data-r="menuwrap"]{grid-template-columns:minmax(0,1fr) !important;gap:34px !important}
+  [data-r="menuindex"]{position:static !important;flex-direction:row !important;flex-wrap:wrap !important;gap:10px 20px !important;max-height:none !important;overflow:visible !important;padding:0 0 28px !important;border-bottom:1px solid var(--line)}
+}
+@media (max-width:960px){
+  [data-r="g12"]{grid-template-columns:minmax(0,1fr) !important}
+  [data-r="g12"]>*{grid-column:auto !important}
+  [data-r="two"]{grid-template-columns:minmax(0,1fr) !important;gap:30px !important}
+  [data-r="cards3"],[data-r="cols4"],[data-r="foot"]{grid-template-columns:repeat(2,minmax(0,1fr)) !important}
+  [data-r="navrow"]{gap:24px !important}
+}
+@media (max-width:860px){
+  [data-r="navlink"],[data-navmeniu]{display:none !important}
+  [data-r="burger"]{display:flex !important}
+  [data-r="navrow"]{gap:16px !important}
+  [data-r="num"]{grid-template-columns:44px minmax(0,1fr) !important;gap:14px 20px !important;padding:26px 0 !important}
+  [data-r="num"]>p{grid-column:2 !important}
+  [data-r="menucols"]{columns:1 !important}
+}
+@media (max-width:680px){
+  [data-r="cards3"],[data-r="cols4"],[data-r="three"],[data-r="foot"]{grid-template-columns:minmax(0,1fr) !important}
+  [data-r="hero"]{height:auto !important;min-height:88svh !important}
+  [data-r="herocontent"]{position:relative !important;inset:auto !important;min-height:88svh;padding-top:120px !important;padding-bottom:40px !important}
+  [data-r="herocontent"] h1{font-size:clamp(40px,11.5vw,52px) !important}
+  [data-r="herocontent"] h1+p{margin:22px 0 32px !important;font-size:17px !important}
+  [data-r="herohours"]{width:100%;justify-content:center;padding-bottom:0 !important}
+  [data-r="herohours"]>div{flex:1 1 0;padding-left:16px !important;padding-right:16px !important}
+  [data-r="herohours"] [data-cms]{font-size:clamp(19px,5.6vw,24px) !important;white-space:nowrap}
+  [data-r="herocue"]{display:none !important}
+  [data-r="heroshade"]{background:linear-gradient(180deg,rgba(15,19,23,0) 0%,rgba(15,19,23,0.55) 45%,rgba(15,19,23,0.8) 100%) !important}
+  [data-r="photo"]{height:auto !important;aspect-ratio:4/3;grid-column:auto !important}
+  [data-r="foot"]{grid-template-columns:repeat(3,minmax(0,1fr)) !important;gap:28px 14px !important;padding-bottom:44px !important}
+  [data-r="foot"]>div:first-child{grid-column:1 / -1}
+  [data-r="foot"]>div:first-child img{height:64px !important;margin-bottom:18px !important}
+  [data-r="foot"] h4{font-size:10px !important;letter-spacing:0.18em !important;margin-bottom:10px !important}
+  [data-r="foot"] p{font-size:14px !important;line-height:1.6 !important}
+  [data-r="foot"] p[style*="font-size:22px"]{font-size:19px !important}
+  [data-r="menuindex"]{gap:8px 16px !important;padding-bottom:22px !important}
+}
+@media (min-width:861px){[data-r="burger"]{display:none !important}}
+html[data-firma="empty"] [data-firma-row]{display:none}
+#orizont-menu{position:fixed;inset:0;z-index:70;opacity:0;visibility:hidden;transition:opacity 300ms ease,visibility 300ms ease}
+html[data-menu="open"] #orizont-menu{opacity:1;visibility:visible}
+html[data-menu="open"]{overflow:hidden}
+html[data-menu="open"] [data-r="burgertop"]{transform:translateY(6px) rotate(45deg)}
+html[data-menu="open"] [data-r="burgermid"]{opacity:0}
+html[data-menu="open"] [data-r="burgerbot"]{transform:translateY(-6px) rotate(-45deg)}
+@media (min-width:861px){#orizont-menu{display:none !important}}
+@keyframes orizontCue{0%{transform:scaleY(0);transform-origin:top}45%{transform:scaleY(1);transform-origin:top}55%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+</style>
+<script src="./orizont-content.js"></script>
+<script src="./cms/orizont-cms.js" data-project-id="bbf8md42" data-dataset="production"></script>
+</helmet>
+
+<div style="background:var(--cream);overflow-x:clip">
+<a data-skip="1" href="#meniu-complet">Sari la meniu</a>
+
+<div data-nav="1" style="position:fixed;top:0;left:0;right:0;z-index:60;display:flex;align-items:center;justify-content:space-between;padding:16px var(--pad);transition:background 800ms ease,padding 800ms ease,border-color 800ms ease;border-bottom:1px solid rgba(222,214,198,0)">
+  <a href="#top" style="display:flex;align-items:center;gap:13px">
+    <span data-navlogo="1" style="position:relative;display:block;transform-origin:left center;transition:transform 800ms ease">
+      <img src="assets/orizont-mark-light.png" alt="Restaurant Orizont" style="height:54px;width:auto;display:block;filter:drop-shadow(0 3px 14px rgba(0,0,0,0.5))">
+      <img data-navlogodark="1" src="assets/orizont-mark.png" alt="" aria-hidden="true" style="position:absolute;top:0;left:0;height:54px;width:auto;display:block;opacity:0;transition:opacity 700ms ease">
+    </span>
+  </a>
+  <nav data-r="navrow" style="display:flex;align-items:center;gap:38px">
+    <a data-r="navlink" data-navtext="1" href="#semnaturi" style="font-size:13px;letter-spacing:0.13em;text-transform:uppercase;color:#F5F1E8;transition:color 800ms ease">Bucătărie</a>
+    <a data-r="navlink" data-navtext="1" href="#platouri" style="font-size:13px;letter-spacing:0.13em;text-transform:uppercase;color:#F5F1E8;transition:color 800ms ease">Platouri</a>
+    <a data-r="navlink" data-navtext="1" href="#atmosfera" style="font-size:13px;letter-spacing:0.13em;text-transform:uppercase;color:#F5F1E8;transition:color 800ms ease">Atmosferă</a>
+    <a data-r="navlink" data-navtext="1" href="#evenimente" style="font-size:13px;letter-spacing:0.13em;text-transform:uppercase;color:#F5F1E8;transition:color 800ms ease">Evenimente</a>
+    <a data-navmeniu="1" href="#meniu-complet" style="font-size:13px;letter-spacing:0.13em;text-transform:uppercase;color:#E8A879;font-weight:500;padding-bottom:3px;border-bottom:1px solid currentColor;transition:color 800ms ease,border-color 800ms ease">Meniu</a>
+    <a data-navbtn="1" data-pulse="1" href="#rezervare" style="font-size:13px;letter-spacing:0.13em;text-transform:uppercase;color:#F5F1E8;border:1px solid rgba(245,241,232,0.45);border-radius:999px;padding:11px 22px;transition:color 800ms ease,border-color 800ms ease,background 400ms ease;animation:orizontPulseLight 1.7s cubic-bezier(.4,0,.2,1) infinite" style-hover="background:var(--accent);border-color:var(--accent);color:#F5F1E8">Rezervă</a>
+    <button type="button" data-r="burger" data-navtext="1" onClick="{{ toggleMenu }}" aria-label="Meniu" style="display:flex;flex-direction:column;justify-content:center;gap:5px;width:44px;height:44px;padding:0;margin-right:-10px;background:none;border:0;cursor:pointer;color:#F5F1E8;transition:color 800ms ease">
+      <span data-r="burgertop" style="display:block;width:24px;height:1.5px;background:currentColor;transition:transform 300ms ease"></span>
+      <span data-r="burgermid" style="display:block;width:24px;height:1.5px;background:currentColor;transition:opacity 200ms ease"></span>
+      <span data-r="burgerbot" style="display:block;width:24px;height:1.5px;background:currentColor;transition:transform 300ms ease"></span>
+    </button>
+  </nav>
+</div>
+
+<div id="orizont-menu" onClick="{{ closeMenu }}" style="background:var(--cream);display:flex;flex-direction:column;justify-content:center;padding:96px var(--pad) 46px;overflow-y:auto">
+  <nav style="display:flex;flex-direction:column;gap:4px;margin-bottom:44px">
+    <a href="#semnaturi" style="font-family:'Instrument Serif',Georgia,serif;font-size:clamp(32px,9vw,44px);line-height:1.25;letter-spacing:-0.02em;padding:6px 0">Bucătărie</a>
+    <a href="#platouri" style="font-family:'Instrument Serif',Georgia,serif;font-size:clamp(32px,9vw,44px);line-height:1.25;letter-spacing:-0.02em;padding:6px 0">Platouri</a>
+    <a href="#atmosfera" style="font-family:'Instrument Serif',Georgia,serif;font-size:clamp(32px,9vw,44px);line-height:1.25;letter-spacing:-0.02em;padding:6px 0">Atmosferă</a>
+    <a href="#meniu-complet" style="font-family:'Instrument Serif',Georgia,serif;font-size:clamp(32px,9vw,44px);line-height:1.25;letter-spacing:-0.02em;padding:6px 0;color:var(--accent)">Meniu complet</a>
+    <a href="#evenimente" style="font-family:'Instrument Serif',Georgia,serif;font-size:clamp(32px,9vw,44px);line-height:1.25;letter-spacing:-0.02em;padding:6px 0">Evenimente</a>
+    <a href="#rezervare" style="font-family:'Instrument Serif',Georgia,serif;font-size:clamp(32px,9vw,44px);line-height:1.25;letter-spacing:-0.02em;padding:6px 0">Rezervări</a>
+  </nav>
+  <div style="display:flex;flex-direction:column;gap:18px;padding-top:30px;border-top:1px solid var(--line)">
+    <a href="tel:+40740306758" style="display:flex;align-items:center;justify-content:center;min-height:52px;background:var(--accent);color:#FFF;font-size:13px;letter-spacing:0.14em;text-transform:uppercase">Sună pentru rezervare</a>
+    <div style="display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.7;color:var(--muted)">
+      <span><span data-cms="adresa">Strada Sighișoara 6</span>, <span data-cms="oras">Arad, România</span></span>
+      <span>Zilnic <span data-cms="program-zilnic">08:00 — 00:00</span> · Bucătăria <span data-cms="program-bucatarie">10:00 — 22:00</span></span>
+    </div>
+  </div>
+</div>
+
+<section id="top" data-r="hero" data-screen-label="Hero" style="position:relative;height:100vh;min-height:700px;overflow:hidden;background:var(--deep)">
+  <div data-heroimg="1" style="position:absolute;inset:-5% 0;transform:scale(1.09);transition:transform 2800ms cubic-bezier(.19,1,.22,1)">
+    <img data-cms-img="orizont-hero" alt="Sala Restaurantului Orizont din Arad, seara, cu mesele ocupate" style="width:100%;height:100%;object-fit:cover;display:block">
+  </div>
+  <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(15,19,23,0.62) 0%,rgba(15,19,23,0.18) 30%,rgba(15,19,23,0.55) 72%,rgba(15,19,23,0.88) 100%)"></div>
+  <div data-r="heroshade" style="position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 60% 80% at 16% 68%,rgba(15,19,23,0.74) 0%,rgba(15,19,23,0.46) 42%,rgba(15,19,23,0) 100%)"></div>
+
+  <div data-r="herocontent" style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:0 var(--pad) clamp(44px,6vh,72px);pointer-events:none;text-shadow:0 1px 2px rgba(0,0,0,0.5),0 6px 28px rgba(0,0,0,0.45)">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:64px;flex-wrap:wrap">
+      <div style="max-width:900px;pointer-events:auto">
+        <div data-reveal="1" style="display:flex;align-items:center;gap:16px;margin-bottom:34px">
+          <span style="width:42px;height:1px;background:rgba(245,241,232,0.5);display:block"></span>
+          <span style="font-size:12px;letter-spacing:0.26em;text-transform:uppercase;color:rgba(245,241,232,0.82)">Arad · Strada Sighișoara 6 · din 2010</span>
+        </div>
+        <h1 data-reveal="1" style="margin:0;font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(48px,7.2vw,116px);line-height:0.98;letter-spacing:-0.022em;color:#F7F4EC"><em style="font-style:italic;color:#E8A879">Mâncare</em> adevărată,<br>în porții pe <em style="font-style:italic;color:#E8A879">măsură</em>.</h1>
+        <p data-reveal="1" style="margin:30px 0 42px;max-width:540px;font-size:18px;line-height:1.65;color:rgba(245,241,232,0.92)">Bucătărie românească, pizza, paste și fructe de mare. Gătite în fiecare zi, servite fără grabă.</p>
+        <div data-reveal="1" style="display:flex;align-items:center;gap:30px;flex-wrap:wrap">
+          <a data-pulse="1" href="#rezervare" style="display:inline-flex;align-items:center;gap:14px;background:var(--accent);color:#FFFDF8;padding:20px 38px;border-radius:999px;font-size:14px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;filter:drop-shadow(0 12px 26px rgba(0,0,0,0.45));transition:transform 600ms cubic-bezier(.19,1,.22,1),background 500ms ease;animation:orizontPulse 2.4s cubic-bezier(.4,0,.2,1) infinite" style-hover="transform:translateY(-2px);background:#8E4D22;color:#FFFDF8">Rezervă o masă</a>
+          <a href="#meniu-complet" style="font-size:14px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(245,241,232,0.86);border-bottom:1px solid rgba(245,241,232,0.35);padding-bottom:5px" style-hover="color:#FBF9F4;border-color:#FBF9F4">Vezi meniul</a>
+        </div>
+      </div>
+      <div data-r="herohours" data-reveal="1" style="pointer-events:auto;display:flex;align-items:stretch;padding-bottom:10px">
+        <div style="display:flex;flex-direction:column;align-items:center;text-align:center;padding-right:44px">
+          <div style="font-size:11px;letter-spacing:0.24em;text-transform:uppercase;color:rgba(245,241,232,0.55);margin-bottom:10px">Deschis zilnic</div>
+          <div data-cms="program-zilnic" style="font-family:'Instrument Serif',Georgia,serif;font-size:26px;color:#F7F4EC">08:00 — 00:00</div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;text-align:center;padding-left:44px;border-left:1px solid rgba(245,241,232,0.22)">
+          <div style="font-size:11px;letter-spacing:0.24em;text-transform:uppercase;color:#E8A879;margin-bottom:10px">Bucătăria</div>
+          <div data-cms="program-bucatarie" style="font-family:'Instrument Serif',Georgia,serif;font-size:26px;color:#E8A879">10:00 — 22:00</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div data-r="herocue" style="position:absolute;left:50%;bottom:0;width:1px;height:74px;background:rgba(245,241,232,0.55);animation:orizontCue 3400ms cubic-bezier(.65,0,.35,1) infinite"></div>
+</section>
+
+<section id="semnaturi" data-screen-label="Semnături" style="padding:clamp(110px,16vh,190px) var(--pad) clamp(90px,12vh,150px)">
+  <div data-reveal="1" style="max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-end;gap:60px;flex-wrap:wrap">
+    <div>
+      <div style="font-size:12px;letter-spacing:0.26em;text-transform:uppercase;color:var(--accent);margin-bottom:28px">Semnăturile casei</div>
+      <h2 style="margin:0;font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(38px,4.6vw,74px);line-height:1.02;letter-spacing:-0.02em;max-width:15ch"><em style="font-style:italic;color:var(--accent)">Trei</em> feluri pentru care se <em style="font-style:italic;color:var(--accent)">revine</em>.</h2>
+    </div>
+    <p style="margin:0;max-width:330px;font-size:16px;line-height:1.75;color:var(--muted)"><em style="font-style:italic;color:var(--accent)">Rețete de familie</em>, gătite în bucătăria noastră de cincisprezece ani. Gramajul e trecut la fiecare fel — știți exact ce primiți.</p>
+  </div>
+
+  <div data-r="g12" style="max-width:1400px;margin:clamp(70px,9vh,110px) auto 0;display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(28px,3vw,48px);align-items:end">
+    <figure data-reveal="1" style="grid-column:span 7;margin:0">
+      <div data-r="photo" style="width:100%;height:clamp(360px,52vh,620px);overflow:hidden;background:#E8E1D3">
+        <img data-cms-img="orizont-dish-1" alt="Sarmale cu mămăliguță, smântână și bacon, servite în farfurie" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;object-position:38% 55%;display:block">
+      </div>
+      <figcaption style="display:flex;justify-content:space-between;align-items:baseline;gap:24px;border-top:1px solid var(--line);margin-top:26px;padding-top:20px">
+        <div>
+          <h3 style="margin:0 0 8px;font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(26px,2.6vw,38px);line-height:1.1">Sarmale cu mămăliguță și bacon</h3>
+          <p style="margin:0;font-size:15px;line-height:1.6;color:var(--muted);max-width:44ch">Cinci bucăți, smântână, mămăligă caldă. 500 g.</p>
+        </div>
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:26px;white-space:nowrap;color:var(--ink)">40 lei</div>
+      </figcaption>
+    </figure>
+
+    <figure data-reveal="1" style="grid-column:span 5;margin:0">
+      <div data-r="photo" style="width:100%;height:clamp(300px,40vh,470px);overflow:hidden;background:#E8E1D3">
+        <img data-cms-img="orizont-dish-2" alt="Disc de berbecuț cu orez, ardei iute și usturoi" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block">
+      </div>
+      <figcaption style="display:flex;justify-content:space-between;align-items:baseline;gap:24px;border-top:1px solid var(--line);margin-top:26px;padding-top:20px">
+        <div>
+          <h3 style="margin:0 0 8px;font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(24px,2.1vw,32px);line-height:1.1">Disc de berbecuț cu orez</h3>
+          <p style="margin:0;font-size:15px;line-height:1.6;color:var(--muted)">Pulpă de oaie, ardei iute, usturoi. 500 g.</p>
+        </div>
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:24px;white-space:nowrap">58 lei</div>
+      </figcaption>
+    </figure>
+  </div>
+
+  <div data-reveal="1" data-r="g12" style="max-width:1400px;margin:clamp(70px,9vh,120px) auto 0;display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(28px,3vw,48px);align-items:center">
+    <div style="grid-column:2 / span 4">
+      <div style="font-size:12px;letter-spacing:0.26em;text-transform:uppercase;color:var(--accent);margin-bottom:24px">Din tavă de lut</div>
+      <h3 style="margin:0 0 22px;font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(30px,3.2vw,50px);line-height:1.06;letter-spacing:-0.015em">Creveți cu unt, usturoi și vin alb</h3>
+      <p style="margin:0 0 30px;font-size:16px;line-height:1.75;color:var(--muted);max-width:38ch">Se coc în tava de lut și ajung la masă în ea. Peperoncino, pătrunjel, baghete calde alături. 350 g.</p>
+      <div style="font-family:'Instrument Serif',Georgia,serif;font-size:30px">68 lei</div>
+    </div>
+    <div data-r="photo" style="grid-column:7 / span 6;height:clamp(340px,50vh,580px);overflow:hidden;background:#E8E1D3">
+      <img data-cms-img="orizont-dish-3" alt="Creveți gătiți în tavă de lut, cu unt, usturoi și vin alb" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block">
+    </div>
+  </div>
+</section>
+
+<section id="de-ce" data-screen-label="De ce Orizont" style="padding:clamp(90px,12vh,150px) var(--pad) clamp(110px,16vh,180px);border-top:1px solid var(--line)">
+  <div style="max-width:1400px;margin:0 auto">
+    <h2 data-reveal="1" style="margin:0 0 clamp(56px,7vh,90px);font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(34px,4vw,64px);line-height:1.05;letter-spacing:-0.02em;max-width:18ch">Un restaurant de <em style="font-style:italic;color:var(--accent)">familie</em>, deschis pentru <em style="font-style:italic;color:var(--accent)">toată lumea</em>.</h2>
+
+    <div style="display:flex;flex-direction:column">
+      <div data-r="num" data-reveal="1" style="display:grid;grid-template-columns:80px 1fr 1.1fr;gap:clamp(24px,4vw,72px);align-items:baseline;padding:34px 0;border-top:1px solid var(--line)">
+        <span style="font-size:12px;letter-spacing:0.2em;color:var(--accent)">01</span>
+        <h3 style="margin:0;font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(24px,2.4vw,36px);line-height:1.15">Deschis în fiecare zi</h3>
+        <p data-cms="program-descriere" style="margin:0;font-size:16px;line-height:1.75;color:var(--muted);max-width:52ch">Zilnic, 08:00 — 00:00. Bucătăria gătește între 10:00 și 22:00, inclusiv sâmbăta și duminica.</p>
+      </div>
+      <div data-r="num" data-reveal="1" style="display:grid;grid-template-columns:80px 1fr 1.1fr;gap:clamp(24px,4vw,72px);align-items:baseline;padding:34px 0;border-top:1px solid var(--line)">
+        <span style="font-size:12px;letter-spacing:0.2em;color:var(--accent)">02</span>
+        <h3 style="margin:0;font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(24px,2.4vw,36px);line-height:1.15">Loc pentru familii</h3>
+        <p style="margin:0;font-size:16px;line-height:1.75;color:var(--muted);max-width:52ch">Mese lungi, terasă liniștită și porții care se împart. Copiii sunt bineveniți la orice oră.</p>
+      </div>
+      <div data-r="num" data-reveal="1" style="display:grid;grid-template-columns:80px 1fr 1.1fr;gap:clamp(24px,4vw,72px);align-items:baseline;padding:34px 0;border-top:1px solid var(--line)">
+        <span style="font-size:12px;letter-spacing:0.2em;color:var(--accent)">03</span>
+        <h3 style="margin:0;font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(24px,2.4vw,36px);line-height:1.15">Românesc și internațional</h3>
+        <p style="margin:0;font-size:16px;line-height:1.75;color:var(--muted);max-width:52ch">Ciorbe și sarmale lângă paste, pizza cu blat subțire, burgeri și fructe de mare.</p>
+      </div>
+      <div data-r="num" data-reveal="1" style="display:grid;grid-template-columns:80px 1fr 1.1fr;gap:clamp(24px,4vw,72px);align-items:baseline;padding:34px 0;border-top:1px solid var(--line)">
+        <span style="font-size:12px;letter-spacing:0.2em;color:var(--accent)">04</span>
+        <h3 style="margin:0;font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(24px,2.4vw,36px);line-height:1.15">Porții generoase</h3>
+        <p style="margin:0;font-size:16px;line-height:1.75;color:var(--muted);max-width:52ch">Un platou haiducesc înseamnă cinci kilograme. Nimeni nu pleacă de la noi flămând.</p>
+      </div>
+      <div data-r="num" data-reveal="1" style="display:grid;grid-template-columns:80px 1fr 1.1fr;gap:clamp(24px,4vw,72px);align-items:baseline;padding:34px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+        <span style="font-size:12px;letter-spacing:0.2em;color:var(--accent)">05</span>
+        <h3 style="margin:0;font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(24px,2.4vw,36px);line-height:1.15">Prețuri transparente</h3>
+        <p style="margin:0;font-size:16px;line-height:1.75;color:var(--muted);max-width:52ch">Fiecare fel are gramajul și ingredientele trecute în meniu. Fără costuri ascunse la final.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="platouri" data-screen-label="Platouri" style="background:var(--deep);color:#F5F1E8;padding:clamp(110px,16vh,190px) var(--pad) clamp(100px,14vh,170px)">
+  <div style="max-width:1400px;margin:0 auto">
+    <div data-reveal="1" style="">
+      <div style="font-size:12px;letter-spacing:0.26em;text-transform:uppercase;color:rgba(245,241,232,0.5);margin-bottom:30px">Platouri</div>
+      <h2 style="margin:0;font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(40px,6.4vw,104px);line-height:0.98;letter-spacing:-0.025em;max-width:16ch;color:#F7F4EC">Pentru <em style="font-style:italic;color:#E8A879">șase</em> oameni. Sau pentru o <em style="font-style:italic;color:#E8A879">seară întreagă</em>.</h2>
+    </div>
+
+    <div data-reveal="1" style="margin-top:clamp(60px,8vh,100px);height:clamp(400px,64vh,720px);overflow:hidden;background:#1A1F24">
+      <img data-cms-img="orizont-platou-1" alt="Platou haiducesc de cinci kilograme, cu grătar, sarmale și garnituri" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block">
+    </div>
+
+    <div data-reveal="1" style="display:flex;justify-content:space-between;align-items:flex-end;gap:48px;flex-wrap:wrap;margin-top:38px;padding-bottom:56px;border-bottom:1px solid rgba(245,241,232,0.16)">
+      <div>
+        <h3 style="margin:0 0 16px;font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(30px,3.6vw,56px);line-height:1;color:#F7F4EC">Platou haiducesc</h3>
+        <p style="margin:0;font-size:16px;line-height:1.7;color:rgba(245,241,232,0.6);max-width:62ch">Pulpe și piept de pui, ceafă, cârnăciori, mititei, slănină, sarmale, ciolan afumat, iahnie, mămăligă, cartofi, murături. 5 kg, pentru 6 persoane.</p>
+      </div>
+      <div style="font-family:'Instrument Serif',Georgia,serif;font-size:clamp(38px,4.4vw,64px);line-height:1;color:#F7F4EC;white-space:nowrap">360 lei</div>
+    </div>
+
+    <div data-r="g12" style="display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(28px,3vw,48px);margin-top:clamp(56px,7vh,88px);align-items:start">
+      <div data-reveal="1" style="grid-column:span 6">
+        <div style="height:clamp(280px,38vh,440px);overflow:hidden;background:#1A1F24">
+          <img data-cms-img="orizont-platou-2" alt="Platoul casei — grătar mixt pentru patru persoane" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block">
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:24px;margin-top:24px;padding-top:20px;border-top:1px solid rgba(245,241,232,0.16)">
+          <div>
+            <h3 style="margin:0 0 8px;font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(24px,2.2vw,34px);color:#F7F4EC">Platoul casei</h3>
+            <p style="margin:0;font-size:15px;line-height:1.6;color:rgba(245,241,232,0.55)">2,6 kg · 4 persoane</p>
+          </div>
+          <div style="font-family:'Instrument Serif',Georgia,serif;font-size:28px;color:#F7F4EC;white-space:nowrap">260 lei</div>
+        </div>
+      </div>
+      <div data-reveal="1" style="grid-column:span 6">
+        <div style="height:clamp(280px,38vh,440px);overflow:hidden;background:#1A1F24">
+          <img data-cms-img="orizont-platou-3" alt="Tava Orizont — ceafă de porc, cartofi și salată, pentru două persoane" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block">
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:24px;margin-top:24px;padding-top:20px;border-top:1px solid rgba(245,241,232,0.16)">
+          <div>
+            <h3 style="margin:0 0 8px;font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(24px,2.2vw,34px);color:#F7F4EC">Tava Orizont</h3>
+            <p style="margin:0;font-size:15px;line-height:1.6;color:rgba(245,241,232,0.55)">1,4 kg · 2 persoane</p>
+          </div>
+          <div style="font-family:'Instrument Serif',Georgia,serif;font-size:28px;color:#F7F4EC;white-space:nowrap">110 lei</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="atmosfera" data-screen-label="Atmosferă" style="padding:clamp(110px,16vh,190px) var(--pad) clamp(100px,14vh,160px)">
+  <div style="max-width:1400px;margin:0 auto">
+    <div data-reveal="1" style="display:flex;justify-content:space-between;align-items:flex-end;gap:60px;flex-wrap:wrap;margin-bottom:clamp(56px,7vh,92px)">
+      <h2 style="margin:0;font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(36px,4.6vw,74px);line-height:1.02;letter-spacing:-0.02em;max-width:14ch">De <em style="font-style:italic;color:var(--accent)">dimineață</em> până <em style="font-style:italic;color:var(--accent)">seara</em> târziu.</h2>
+      <p style="margin:0;max-width:330px;font-size:16px;line-height:1.75;color:var(--muted)">Sala primește lumina de est la micul dejun. Terasa rămâne umbrită toată după-amiaza.</p>
+    </div>
+
+    <div data-r="two" style="display:grid;grid-template-columns:minmax(0,1.32fr) minmax(0,1fr);gap:clamp(20px,2.4vw,32px);align-items:stretch">
+      <figure data-reveal="1" style="margin:0">
+        <div data-r="photo" style="height:clamp(420px,68vh,760px);overflow:hidden;background:#E8E1D3">
+          <img data-cms-img="orizont-atm-1" alt="Sala restaurantului dimineața, cu lumină naturală și mesele pregătite" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block">
+        </div>
+        <figcaption style="margin-top:18px;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted)">Sala · dimineața</figcaption>
+      </figure>
+      <div style="display:flex;flex-direction:column;gap:clamp(20px,2.4vw,32px)">
+        <figure data-reveal="1" style="margin:0;flex:1;display:flex;flex-direction:column">
+          <div style="flex:1;min-height:190px;overflow:hidden;background:#E8E1D3">
+            <img data-cms-img="orizont-atm-2" alt="Terasa restaurantului după-amiaza, la umbră" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block">
+          </div>
+          <figcaption style="margin-top:18px;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted)">Terasa · după-amiaza</figcaption>
+        </figure>
+        <figure data-reveal="1" style="margin:0;flex:1;display:flex;flex-direction:column">
+          <div style="flex:1;min-height:190px;overflow:hidden;background:#E8E1D3">
+            <img data-cms-img="orizont-atm-3" alt="Sala restaurantului seara, cu lumină caldă și oaspeți la masă" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block">
+          </div>
+          <figcaption style="margin-top:18px;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted)">Sala · seara</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <figure data-reveal="1" style="margin:clamp(20px,2.4vw,32px) 0 0">
+      <div data-r="photo" style="height:clamp(300px,46vh,540px);overflow:hidden;background:#E8E1D3">
+        <img data-cms-img="orizont-atm-4" alt="Bucătăria restaurantului în timpul serviciului" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block">
+      </div>
+      <figcaption style="margin-top:18px;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted)">Bucătăria · serviciul de prânz</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="meniu" data-screen-label="Meniu" style="padding:clamp(90px,12vh,150px) var(--pad) clamp(110px,16vh,180px);border-top:1px solid var(--line)">
+  <div style="max-width:1400px;margin:0 auto">
+    <div data-reveal="1" style="display:flex;justify-content:space-between;align-items:flex-end;gap:48px;flex-wrap:wrap">
+      <div>
+        <div style="font-size:12px;letter-spacing:0.26em;text-transform:uppercase;color:var(--accent);margin-bottom:28px">Meniul</div>
+        <h2 style="margin:0;font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(36px,4.6vw,74px);line-height:1.02;letter-spacing:-0.02em;max-width:13ch">Peste <em style="font-style:italic;color:var(--accent)">o sută</em> de feluri. Trei începuturi <em style="font-style:italic;color:var(--accent)">bune</em>.</h2>
+      </div>
+      <a href="#meniu-complet" style="font-size:14px;letter-spacing:0.1em;text-transform:uppercase;border-bottom:1px solid var(--line);padding-bottom:6px" style-hover="color:var(--accent);border-color:var(--accent)">Meniul complet</a>
+    </div>
+
+    <div data-r="cards3" style="display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,2.6vw,40px);margin-top:clamp(56px,7vh,92px)">
+      <article data-reveal="1" style="">
+        <div style="aspect-ratio:4/5;overflow:hidden;background:#E8E1D3">
+          <img data-cms-img="orizont-menu-1" alt="Ciorbă servită în bol, cu smântână și ardei iute" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block">
+        </div>
+        <h3 style="margin:26px 0 10px;font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(24px,2.1vw,32px)">Ciorbe</h3>
+        <p style="margin:0 0 14px;font-size:15px;line-height:1.65;color:var(--muted)">Burtă, rădăuțeană, țărănească de vacuță. Pâine, smântână și ardei iute incluse.</p>
+        <sc-if value="{{ showPrices }}" hint-placeholder-val="{{ true }}"><div style="font-size:13px;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent)">25 — 32 lei</div></sc-if>
+      </article>
+      <article data-reveal="1" style="">
+        <div style="aspect-ratio:4/5;overflow:hidden;background:#E8E1D3">
+          <img data-cms-img="orizont-menu-2" alt="Pizza cu blat subțire, tăiată felii" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block">
+        </div>
+        <h3 style="margin:26px 0 10px;font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(24px,2.1vw,32px)">Pizza &amp; paste</h3>
+        <p style="margin:0 0 14px;font-size:15px;line-height:1.65;color:var(--muted)">Zece rețete de pizza, de la Margherita la Crudo e rucola. Paste cu creveți și somon.</p>
+        <sc-if value="{{ showPrices }}" hint-placeholder-val="{{ true }}"><div style="font-size:13px;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent)">25 — 52 lei</div></sc-if>
+      </article>
+      <article data-reveal="1" style="">
+        <div style="aspect-ratio:4/5;overflow:hidden;background:#E8E1D3">
+          <img data-cms-img="orizont-menu-3" alt="Papanași cu afine și smântână" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block">
+        </div>
+        <h3 style="margin:26px 0 10px;font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(24px,2.1vw,32px)">Desert</h3>
+        <p style="margin:0 0 14px;font-size:15px;line-height:1.65;color:var(--muted)">Papanași cu afine și smântână, clătite, tiramisu. Făcute în casă, în fiecare zi.</p>
+        <sc-if value="{{ showPrices }}" hint-placeholder-val="{{ true }}"><div style="font-size:13px;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent)">18 — 32 lei</div></sc-if>
+      </article>
+    </div>
+
+    <div data-r="cols4" style="display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(24px,2.6vw,40px);margin-top:clamp(56px,7vh,80px);padding-top:34px;border-top:1px solid var(--line)">
+      <div>
+        <h4 style="margin:0 0 10px;font-size:13px;letter-spacing:0.18em;text-transform:uppercase">Mic dejun</h4>
+        <p style="margin:0;font-size:15px;line-height:1.65;color:var(--muted)">Omlete, ouă ochiuri cu bacon și telemea. De la 10:00.</p>
+      </div>
+      <div>
+        <h4 style="margin:0 0 10px;font-size:13px;letter-spacing:0.18em;text-transform:uppercase">Fel principal</h4>
+        <p style="margin:0;font-size:15px;line-height:1.65;color:var(--muted)">Grătar, discuri, mămăligă, gulaș, ciolan cu fasole.</p>
+      </div>
+      <div>
+        <h4 style="margin:0 0 10px;font-size:13px;letter-spacing:0.18em;text-transform:uppercase">Limonade</h4>
+        <p style="margin:0;font-size:15px;line-height:1.65;color:var(--muted)">Șase feluri, 450 ml, stoarse la comandă.</p>
+      </div>
+      <div>
+        <h4 style="margin:0 0 10px;font-size:13px;letter-spacing:0.18em;text-transform:uppercase">Vinuri</h4>
+        <p style="margin:0;font-size:15px;line-height:1.65;color:var(--muted)">Sâmburești, Chateau Valvis, Carpathia. La pahar sau la carafă.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="meniu-complet" data-screen-label="Meniul complet" style="padding:clamp(100px,14vh,170px) var(--pad) clamp(110px,16vh,180px);border-top:1px solid var(--line);background:var(--paper);scroll-margin-top:90px">
+  <div style="max-width:1400px;margin:0 auto">
+    <div data-reveal="1" style="display:flex;justify-content:space-between;align-items:flex-end;gap:60px;flex-wrap:wrap;margin-bottom:clamp(56px,7vh,92px)">
+      <div>
+        <div style="font-size:12px;letter-spacing:0.26em;text-transform:uppercase;color:var(--accent);margin-bottom:28px">Meniul complet</div>
+        <h2 style="margin:0;font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(36px,4.6vw,74px);line-height:1.02;letter-spacing:-0.02em;max-width:14ch">Tot ce <em style="font-style:italic;color:var(--accent)">gătim</em>, cu gramaj și <em style="font-style:italic;color:var(--accent)">preț</em>.</h2>
+      </div>
+      <p style="margin:0;max-width:330px;font-size:16px;line-height:1.75;color:var(--muted)">Prețurile sunt în lei și includ TVA. Bucătăria gătește între <em style="font-style:italic;color:var(--accent)">10:00 și 22:00</em>; băuturile se servesc până la <em style="font-style:italic;color:var(--accent)">miezul nopții</em>.</p>
+    </div>
+
+    <div data-r="menuwrap" style="display:grid;grid-template-columns:220px 1fr;gap:clamp(40px,6vw,96px);align-items:start">
+      <nav data-r="menuindex" style="position:sticky;top:104px;display:flex;flex-direction:column;gap:11px;padding-right:12px;max-height:calc(100vh - 130px);overflow-y:auto">
+        <sc-for list="{{ menu }}" as="cat" hint-placeholder-count="10">
+          <a href="#{{ cat.id }}" style="font-size:13px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);line-height:1.35" style-hover="color:var(--accent)">{{ cat.name }}</a>
+        </sc-for>
+      </nav>
+
+      <div style="display:flex;flex-direction:column;gap:clamp(56px,7vh,88px)">
+        <sc-for list="{{ menu }}" as="cat" hint-placeholder-count="4">
+          <section id="{{ cat.id }}" style="scroll-margin-top:120px">
+            <div style="display:flex;align-items:baseline;gap:20px;flex-wrap:wrap;margin-bottom:26px">
+              <h3 style="margin:0;font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(28px,3vw,44px);line-height:1;letter-spacing:-0.015em">{{ cat.name }}</h3>
+              <span style="font-size:13px;line-height:1.5;color:var(--muted)">{{ cat.note }}</span>
+            </div>
+            <div data-r="menucols" style="columns:2;column-gap:clamp(32px,5vw,80px)">
+              <sc-for list="{{ cat.items }}" as="it" hint-placeholder-count="6">
+                <div style="break-inside:avoid;display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding:14px 0;border-top:1px solid var(--line)">
+                  <div style="min-width:0">
+                    <div style="font-size:15px;line-height:1.45">{{ it.n }}</div>
+                    <div style="font-size:12px;letter-spacing:0.12em;color:var(--muted);margin-top:6px">{{ it.g }}</div>
+                  </div>
+                  <div style="font-family:'Instrument Serif',Georgia,serif;font-size:20px;white-space:nowrap">{{ it.p }}</div>
+                </div>
+              </sc-for>
+            </div>
+          </section>
+        </sc-for>
+      </div>
+    </div>
+
+    <p data-reveal="1" style="max-width:1400px;margin:clamp(64px,8vh,100px) 0 0;padding-top:30px;border-top:1px solid var(--line);font-size:13px;line-height:1.8;color:var(--muted)">Lista completă a alergenilor este afișată în restaurant, conform Regulamentului (UE) nr. 1169/2011. Pentru alergii severe, vă rugăm să anunțați șeful de sală înainte de a comanda.</p>
+  </div>
+</section>
+
+<section id="evenimente" data-screen-label="Evenimente" style="padding:clamp(110px,16vh,200px) var(--pad) clamp(100px,14vh,170px);border-top:1px solid var(--line)">
+  <div style="max-width:1400px;margin:0 auto">
+    <div data-reveal="1" data-r="two" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(48px,7vw,110px);align-items:end;margin-bottom:clamp(52px,7vh,86px)">
+      <div>
+        <div style="font-size:12px;letter-spacing:0.26em;text-transform:uppercase;color:var(--accent);margin-bottom:28px">Evenimente</div>
+        <h2 style="margin:0;font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(40px,5.6vw,92px);line-height:0.98;letter-spacing:-0.025em;max-width:15ch">Botezuri, <em style="font-style:italic;color:var(--accent)">nunți</em>, mese de <em style="font-style:italic;color:var(--accent)">firmă</em>.</h2>
+      </div>
+      <p style="margin:0;max-width:46ch;font-size:17px;line-height:1.8;color:var(--muted)">Organizăm evenimente private în restaurant: aniversări, botezuri, cine de familie, petreceri de firmă și mese festive. Meniul, aranjarea sălii și programul se stabilesc împreună cu dumneavoastră, în funcție de numărul de invitați.</p>
+    </div>
+
+    <div data-r="three" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(28px,4vw,64px);padding-top:38px;border-top:1px solid var(--line);margin-bottom:clamp(52px,7vh,86px)">
+      <div>
+        <h3 style="margin:0 0 12px;font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:26px;letter-spacing:-0.01em">Ocazii de familie</h3>
+        <p style="margin:0;font-size:15px;line-height:1.75;color:var(--muted)">Botezuri, aniversări, cumetrii și mese de pomenire, cu meniu pe măsura grupului.</p>
+      </div>
+      <div>
+        <h3 style="margin:0 0 12px;font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:26px;letter-spacing:-0.01em">Petreceri și nunți</h3>
+        <p style="margin:0;font-size:15px;line-height:1.75;color:var(--muted)">Sala se aranjează pentru grupuri mari, cu platouri, aperitive și fel principal la alegere.</p>
+      </div>
+      <div>
+        <h3 style="margin:0 0 12px;font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:26px;letter-spacing:-0.01em">Evenimente de firmă</h3>
+        <p style="margin:0;font-size:15px;line-height:1.75;color:var(--muted)">Mese de echipă, cine de business și petreceri de final de an, în zilele lucrătoare.</p>
+      </div>
+    </div>
+
+    <div data-reveal="1" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:clamp(28px,4vw,60px);background:var(--deep);color:rgba(245,241,232,0.78);padding:clamp(36px,5vw,58px) clamp(32px,5vw,64px)">
+      <div style="max-width:40ch">
+        <div style="font-size:11px;letter-spacing:0.24em;text-transform:uppercase;color:#E8A879;margin-bottom:14px">Detalii și disponibilitate</div>
+        <p style="margin:0;font-family:'Instrument Serif',Georgia,serif;font-size:clamp(24px,2.6vw,34px);line-height:1.3;color:#F7F4EC">Pentru <em style="font-style:italic;color:#E8A879">detalii</em> și rezervarea unei date, sunați-ne la <em style="font-style:italic;color:#E8A879">numărul restaurantului</em>.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:20px">
+        <a href="tel:+40740306758" style="display:inline-block;font-family:'Instrument Serif',Georgia,serif;font-size:clamp(30px,3.6vw,54px);line-height:1;letter-spacing:-0.02em;color:#F7F4EC;border-bottom:1px solid rgba(245,241,232,0.3);padding-bottom:10px" style-hover="color:#E8A879;border-color:#E8A879">0740 306 758</a>
+        <span data-cms="program-telefon-ore" style="font-size:13px;line-height:1.7;color:rgba(245,241,232,0.6)">Zilnic, între 08:00 și 22:00</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="rezervare" data-screen-label="Rezervare" style="padding:clamp(110px,16vh,200px) var(--pad) clamp(100px,14vh,170px);border-top:1px solid var(--line)">
+  <div data-r="two" style="max-width:1400px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(48px,7vw,120px);align-items:center">
+    <div data-reveal="1" style="">
+      <div style="font-size:12px;letter-spacing:0.26em;text-transform:uppercase;color:var(--accent);margin-bottom:30px">Rezervări</div>
+      <h2 style="margin: 0 0 34px; font-family: 'Instrument Serif',Georgia,serif; font-weight: 400; font-size: clamp(40px,5.6vw,92px); line-height: 0.98; letter-spacing: -0.025em; max-width: 12ch; width: 512px; height: 187px">Vă ținem o <em style="font-style:italic;color:var(--accent)">masă</em>.</h2>
+      <p style="margin:0 0 46px;font-size:18px;line-height:1.7;color:var(--muted);max-width:44ch">Sunați între 08:00 și 22:00, în orice zi. Pentru grupuri mai mari de opt persoane, cu o zi <em style="font-style:italic;color:var(--accent)">înainte</em>.</p>
+      <a href="tel:+40740306758" style="display:inline-block;font-family:'Instrument Serif',Georgia,serif;font-size:clamp(34px,4.4vw,68px);line-height:1;letter-spacing:-0.02em;border-bottom:1px solid var(--line);padding-bottom:12px" style-hover="color:var(--accent);border-color:var(--accent)">0740 306 758</a>
+      <div style="display:flex;gap:20px;flex-wrap:wrap;margin-top:48px">
+        <a data-pulse="1" href="https://www.google.com/maps/place/Strada+Sighi%C8%99oara+6,+Arad" target="_blank" rel="noreferrer" style="display:inline-flex;align-items:center;gap:12px;background:var(--accent);color:#FBF9F4;padding:19px 34px;border-radius:999px;font-size:14px;letter-spacing:0.1em;text-transform:uppercase;font-weight:600;transition:transform 600ms cubic-bezier(.19,1,.22,1),background 500ms ease;animation:orizontPulse 2.4s cubic-bezier(.4,0,.2,1) infinite" style-hover="transform:translateY(-2px);background:#8E4D22;color:#FFFDF8">Vezi harta</a>
+        <a data-pulse="1" href="https://wa.me/40740306758?text=Bun%C4%83%20ziua%2C%20a%C8%99%20dori%20s%C4%83%20rezerv%20o%20mas%C4%83%20la%20Restaurant%20Orizont." target="_blank" rel="noreferrer" style="display:inline-flex;align-items:center;gap:12px;background:#0E7A3C;color:#FFFDF8;padding:19px 32px;border-radius:999px;font-size:14px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;transition:transform 600ms cubic-bezier(.19,1,.22,1),background 500ms ease;animation:orizontPulseGreen 1.7s cubic-bezier(.4,0,.2,1) infinite" style-hover="transform:translateY(-2px);background:#0A5E2E;color:#FFFDF8">
+          <svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0 0 20.465 3.488"></path></svg>
+          WhatsApp
+        </a>
+        <a href="https://www.facebook.com/RestaurantOrizontArad" target="_blank" rel="noreferrer" style="display:inline-flex;align-items:center;gap:12px;border:1px solid var(--line);padding:19px 34px;border-radius:999px;font-size:14px;letter-spacing:0.1em;text-transform:uppercase;transition:border-color 500ms ease,color 500ms ease" style-hover="border-color:var(--accent);color:var(--accent)">RestaurantOrizontArad</a>
+      </div>
+    </div>
+    <div data-reveal="1" style="">
+      <div data-r="photo" style="height:clamp(380px,60vh,660px);overflow:hidden;background:#E8E1D3">
+        <img data-cms-img="orizont-rezervare" alt="Masă pregătită pentru rezervare, cu pahare și lumină de seară" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block">
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer data-screen-label="Footer" style="background:var(--deep);color:rgba(245,241,232,0.72);padding:clamp(70px,9vh,110px) var(--pad) 46px">
+  <div style="max-width:1400px;margin:0 auto">
+    <div data-r="foot" style="display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:clamp(32px,4vw,64px);align-items:start;padding-bottom:64px;border-bottom:1px solid rgba(245,241,232,0.14)">
+      <div>
+        <img src="assets/orizont-mark-light.png" alt="Restaurant Orizont" style="height:90px;width:auto;display:block;margin-bottom:30px">
+        <p style="margin:0;font-family:'Instrument Serif',Georgia,serif;font-size:22px;line-height:1.4;color:#F7F4EC;max-width:22ch">Restaurant de <em style="font-style:italic;color:#E8A879">familie</em> în <em style="font-style:italic;color:#E8A879">Arad</em>, din 2010.</p>
+      </div>
+      <div>
+        <h4 style="margin:0 0 16px;font-size:11px;letter-spacing:0.24em;text-transform:uppercase;color:rgba(245,241,232,0.45)">Adresă</h4>
+        <p style="margin:0;font-size:16px;line-height:1.7"><span data-cms="adresa">Strada Sighișoara 6</span><br><span data-cms="oras">Arad, România</span></p>
+      </div>
+      <div>
+        <h4 style="margin:0 0 16px;font-size:11px;letter-spacing:0.24em;text-transform:uppercase;color:rgba(245,241,232,0.45)">Program</h4>
+        <p style="margin:0;font-size:16px;line-height:1.7"><span style="display:block">Zilnic</span><span data-cms="program-zilnic" style="display:block">08:00 — 00:00</span><span style="display:block;margin-top:6px">Bucătăria</span><span data-cms="program-bucatarie" style="display:block">10:00 — 22:00</span></p>
+      </div>
+      <div>
+        <h4 style="margin:0 0 16px;font-size:11px;letter-spacing:0.24em;text-transform:uppercase;color:rgba(245,241,232,0.45)">Contact</h4>
+        <p style="margin:0;font-size:16px;line-height:1.7"><a href="tel:+40740306758">0740 306 758</a><br><a href="https://wa.me/40740306758" target="_blank" rel="noreferrer">WhatsApp</a><br><a href="https://www.facebook.com/RestaurantOrizontArad" target="_blank" rel="noreferrer">Facebook</a></p>
+      </div>
+    </div>
+    <div style="display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;padding-top:28px;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(245,241,232,0.4)">
+      <div style="display:flex;flex-wrap:wrap;gap:10px 24px;align-items:center">
+        <span>© 2026 Restaurant Orizont</span>
+        <a href="/termeni-si-confidentialitate.html">Termeni și confidențialitate</a>
+        <a href="https://anpc.ro/ce-este-sal/" target="_blank" rel="noreferrer">ANPC — SAL</a>
+        <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noreferrer">SOL</a>
+      </div>
+      <span>Alergeni conform Reg. (UE) 1169/2011</span>
+    </div>
+    <p data-firma-row="1" style="margin:22px 0 0;font-size:11px;line-height:1.8;letter-spacing:0.06em;color:rgba(245,241,232,0.3);max-width:80ch"><span data-cms="firma-denumire">de completat</span> · CUI <span data-cms="firma-cui">de completat</span> · Nr. reg. com. <span data-cms="firma-regcom">de completat</span> · Sediu social: <span data-cms="firma-sediu">de completat</span></p>
+  </div>
+</footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#A65C2A&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#A65C2A&quot;,&quot;#9E5638&quot;,&quot;#5F6A45&quot;,&quot;#2F6B72&quot;],&quot;section&quot;:&quot;Aspect&quot;},&quot;revealOnScroll&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Mișcare&quot;},&quot;showPrices&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Conținut&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    this.apply();
+    document.addEventListener("click", this.openExternal);
+    this.menuOpen = false;
+    this.setMenu(false);
+    this.paintAlts();
+    this.altTimer = setInterval(() => this.paintAlts(), 1500);
+    this.onResize = () => { if (innerWidth > 860 && this.menuOpen) this.closeMenu(); };
+    window.addEventListener("resize", this.onResize);
+    this.onContent = () => { this.forceUpdate(); this.paintCms(); };
+    window.addEventListener("orizont-content-change", this.onContent);
+    window.addEventListener("storage", this.onContent);
+    if (!window.ORIZONT) {
+      this.cmsWait = setInterval(() => { if (window.ORIZONT) { clearInterval(this.cmsWait); this.onContent(); } }, 120);
+    }
+    this.onScroll = () => this.paint();
+    window.addEventListener("scroll", this.onScroll, { passive: true });
+    this.paint();
+    setTimeout(() => { document.querySelectorAll("[data-heroimg]").forEach((el) => { el.style.transform = "scale(1)"; }); }, 120);
+  }
+  componentDidUpdate() { this.apply(); this.paintCms(); this.paintAlts(); }
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.onScroll);
+    document.removeEventListener("click", this.openExternal);
+    window.removeEventListener("resize", this.onResize);
+    clearInterval(this.altTimer);
+    document.documentElement.removeAttribute("data-menu");
+    window.removeEventListener("orizont-content-change", this.onContent);
+    window.removeEventListener("storage", this.onContent);
+    clearInterval(this.cmsWait);
+  }
+  paintCms() { if (window.ORIZONT) window.ORIZONT.paint(document); }
+  paintAlts() {
+    document.querySelectorAll("image-slot[data-alt]").forEach((s) => {
+      const img = s.shadowRoot && s.shadowRoot.querySelector("img[part=image]");
+      if (!img) return;
+      const alt = s.getAttribute("data-alt");
+      if (img.getAttribute("alt") !== alt) img.setAttribute("alt", alt);
+      if (s.id !== "orizont-hero") { img.loading = "lazy"; img.decoding = "async"; }
+    });
+  }
+  setMenu(open) {
+    document.documentElement.setAttribute("data-menu", open ? "open" : "closed");
+  }
+  toggleMenu = (e) => {
+    e.stopPropagation();
+    this.menuOpen = !this.menuOpen;
+    this.setMenu(this.menuOpen);
+  };
+  closeMenu = () => { this.menuOpen = false; this.setMenu(false); };
+  openExternal = (e) => {
+    const a = e.target.closest && e.target.closest('a[href^="http"], a[href^="tel:"], a[href^="mailto:"]');
+    if (!a) return;
+    const href = a.getAttribute("href");
+    e.preventDefault();
+    const w = window.open(href, "_blank", "noopener,noreferrer");
+    if (!w) { try { (window.top || window).location.href = href; } catch (err) { window.location.href = href; } }
+  };
+  apply() {
+    document.documentElement.style.setProperty("--accent", this.props.accent || "#A65C2A");
+    document.documentElement.setAttribute("data-motion", this.props.revealOnScroll === false ? "off" : "on");
+  }
+  paint() {
+    const past = window.scrollY > window.innerHeight * 0.82;
+    document.querySelectorAll("[data-nav]").forEach((el) => {
+      el.style.background = past ? "rgba(245,241,232,0.94)" : "transparent";
+      el.style.backdropFilter = past ? "saturate(1.1) blur(14px)" : "none";
+      el.style.borderBottomColor = past ? "var(--line)" : "rgba(222,214,198,0)";
+      el.style.padding = past ? "10px var(--pad)" : "16px var(--pad)";
+    });
+    document.querySelectorAll("[data-navlogo]").forEach((el) => { el.style.transform = past ? "scale(0.78)" : "scale(1)"; });
+    document.querySelectorAll("[data-navlogodark]").forEach((el) => { el.style.opacity = past ? "1" : "0"; });
+    document.querySelectorAll("[data-navtext]").forEach((el) => { el.style.color = past ? "var(--ink)" : "#F5F1E8"; });
+    document.querySelectorAll("[data-navmeniu]").forEach((el) => { el.style.color = past ? "var(--accent)" : "#E8A879"; });
+    document.querySelectorAll("[data-navbtn]").forEach((el) => {
+      el.style.color = past ? "var(--ink)" : "#F5F1E8";
+      el.style.borderColor = past ? "var(--accent)" : "rgba(245,241,232,0.45)";
+      el.style.animationName = past ? "orizontPulse" : "orizontPulseLight";
+    });
+  }
+  renderVals() {
+    const show = this.props.showPrices !== false;
+    const c = window.ORIZONT ? window.ORIZONT.load() : null;
+    const menu = (c ? c.menu : []).filter((cat) => !cat.hidden).map((cat) => ({
+      id: cat.id, name: cat.name, note: cat.note,
+      items: (cat.items || []).filter((it) => !it.hidden).map((it) => ({
+        n: it.n, g: it.g, p: show ? String(it.p).replace(/\s*lei$/i, "") + " lei" : ""
+      }))
+    }));
+    return { showPrices: show, menu: menu, toggleMenu: this.toggleMenu, closeMenu: this.closeMenu };
+  }
+}
+
+</script>
+</body>
+</html>
