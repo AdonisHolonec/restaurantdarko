@@ -24,7 +24,7 @@
     '"menu": *[_type=="categorieMeniu"]|order(ordine asc){',
     '"id":slug.current,"name":nume,"note":nota,"hidden":ascunsa,',
     '"items":feluri[]{"n":denumire,"g":gramaj,"p":pret,"hidden":ascuns}},',
-    '"imagini": *[_type=="imagineSite" && defined(imagine)]{cheie,alt,"url":imagine.asset->url}',
+    '"imagini": *[_type=="imagineSite" && defined(imagine)]{cheie,alt,ordine,_createdAt,"url":imagine.asset->url}',
     "}"
   ].join("");
 
@@ -37,7 +37,8 @@
     program: { zilnic: "08:00 — 00:00", bucatarie: "10:00 — 22:00", descriere: "", telefonOre: "" },
     contact: { telefon: "0740 306 758", adresa: "Strada Sighișoara 6", oras: "Arad, România", facebook: "" },
     menu: [],
-    imagini: {}
+    imagini: {},
+    galerii: {}
   };
 
   function clone(o) { return JSON.parse(JSON.stringify(o)); }
@@ -46,8 +47,23 @@
   function shape(r) {
     var s = (r && r.setari) || {};
     var base = baseline();
+    // Mai multe fotografii pot avea aceeași poziție: imagini[cheie] e prima (poziții simple),
+    // galerii[cheie] e lista completă, în ordinea câmpului „ordine”, apoi a adăugării.
     var imagini = {};
-    ((r && r.imagini) || []).forEach(function (i) { if (i.cheie && i.url) imagini[i.cheie] = { url: i.url, alt: i.alt || "" }; });
+    var galerii = {};
+    ((r && r.imagini) || [])
+      .filter(function (i) { return i.cheie && i.url; })
+      .sort(function (a, b) {
+        var oa = typeof a.ordine === "number" ? a.ordine : Infinity;
+        var ob = typeof b.ordine === "number" ? b.ordine : Infinity;
+        if (oa !== ob) return oa < ob ? -1 : 1;
+        return String(a._createdAt || "").localeCompare(String(b._createdAt || ""));
+      })
+      .forEach(function (i) {
+        var item = { url: i.url, alt: i.alt || "" };
+        if (!imagini[i.cheie]) imagini[i.cheie] = item;
+        (galerii[i.cheie] = galerii[i.cheie] || []).push(item);
+      });
     return {
       program: {
         zilnic: s.programZilnic || (base && base.program.zilnic) || FALLBACK.program.zilnic,
@@ -69,7 +85,8 @@
           items: (c.items || []).map(function (i) { return { n: i.n, g: i.g || "", p: String(i.p), hidden: !!i.hidden }; })
         };
       }),
-      imagini: imagini
+      imagini: imagini,
+      galerii: galerii
     };
   }
 
@@ -114,6 +131,38 @@
     });
   }
 
+  function paintGalleries(doc, c) {
+    doc.querySelectorAll("[data-gallery]").forEach(function (box) {
+      var key = box.getAttribute("data-gallery");
+      var list = (c.galerii && c.galerii[key]) || (c.imagini && c.imagini[key] ? [c.imagini[key]] : []);
+      var sig = list.map(function (i) { return i.url; }).join("|");
+      if (box.getAttribute("data-gallery-painted") === sig) return;
+      box.setAttribute("data-gallery-painted", sig);
+      var track = box.querySelector("[data-gallery-track]");
+      var dots = box.querySelector("[data-gallery-dots]");
+      var fallbackAlt = box.getAttribute("data-alt") || "";
+      track.textContent = "";
+      dots.textContent = "";
+      list.forEach(function (item, n) {
+        var img = document.createElement("img");
+        img.src = item.url + "?w=1200&auto=format&fit=crop";
+        img.alt = item.alt || fallbackAlt;
+        img.loading = "lazy";
+        img.decoding = "async";
+        track.appendChild(img);
+        var dot = document.createElement("button");
+        dot.type = "button";
+        dot.setAttribute("data-gallery-go", String(n));
+        dot.setAttribute("aria-label", "Fotografia " + (n + 1) + " din " + list.length);
+        dot.setAttribute("aria-current", n === 0 ? "true" : "false");
+        dots.appendChild(dot);
+      });
+      track.scrollLeft = 0;
+      if (list.length > 1) box.setAttribute("data-multi", "1");
+      else box.removeAttribute("data-multi");
+    });
+  }
+
   function paint(root, c) {
     c = c || current;
     var doc = root || document;
@@ -145,6 +194,7 @@
       doc.querySelectorAll('a[href*="facebook.com"]').forEach(function (n) { n.setAttribute("href", c.contact.facebook); });
     }
     paintImages(doc, c);
+    paintGalleries(doc, c);
     var f = c.firma || {};
     var golFirma = !["denumire", "cui", "regcom", "sediu"].some(function (k) { return String(f[k] || "").trim(); });
     doc.documentElement.setAttribute("data-firma", golFirma ? "empty" : "set");

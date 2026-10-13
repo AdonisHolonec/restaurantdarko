@@ -53,6 +53,10 @@ Cheile pentru cele 18 poziții:
 `orizont-hero`, `orizont-dish-1..3`, `orizont-platou-1..3`, `orizont-atm-1..4`,
 `orizont-menu-1..3`, `orizont-eveniment-1..3`, `orizont-rezervare`.
 
+`orizont-menu-1..3` sunt caruseluri: pot avea oricâte fotografii. Pentru o fotografie în plus
+se creează încă un document „Fotografie de pe site” cu aceeași poziție; câmpul opțional
+`ordine` (1, 2, 3…) stabilește ordinea, altfel contează ordinea adăugării.
+
 ---
 
 ## 2. Punerea în funcțiune (Sanity)

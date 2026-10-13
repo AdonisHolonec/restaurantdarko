@@ -134,6 +134,24 @@ html[data-menu="open"] [data-r="burgertop"]{transform:translateY(6px) rotate(45d
 html[data-menu="open"] [data-r="burgermid"]{opacity:0}
 html[data-menu="open"] [data-r="burgerbot"]{transform:translateY(-6px) rotate(-45deg)}
 @media (min-width:861px){#orizont-menu{display:none !important}}
+/* --- caruselul de fotografii din fiecare card al secțiunii Meniu --- */
+[data-gallery-track]{display:flex;width:100%;height:100%;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-behavior:smooth;overscroll-behavior-x:contain;scrollbar-width:none}
+[data-gallery-track]::-webkit-scrollbar{display:none}
+[data-gallery-track]>img{flex:0 0 100%;width:100%;height:100%;object-fit:cover;display:block;scroll-snap-align:start;scroll-snap-stop:always}
+[data-gallery-btn]{position:absolute;top:50%;transform:translateY(-50%);display:flex;align-items:center;justify-content:center;width:44px;height:44px;padding:0;border:0;border-radius:999px;background:rgba(15,19,23,0.42);color:#F7F4EC;cursor:pointer;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);opacity:0;transition:opacity 400ms ease,background 400ms ease}
+[data-gallery-btn="prev"]{left:12px}
+[data-gallery-btn="next"]{right:12px}
+[data-gallery]:hover [data-gallery-btn],[data-gallery-btn]:focus-visible{opacity:1}
+[data-gallery-btn]:hover{background:rgba(15,19,23,0.68)}
+[data-gallery-dots]{position:absolute;left:0;right:0;bottom:12px;display:flex;justify-content:center;gap:2px}
+[data-gallery-dots]>button{display:flex;align-items:center;justify-content:center;width:24px;height:24px;padding:0;border:0;background:none;cursor:pointer}
+[data-gallery-dots]>button::before{content:"";width:7px;height:7px;border-radius:999px;background:rgba(247,244,236,0.55);box-shadow:0 0 0 1px rgba(15,19,23,0.18);transition:background 300ms ease,transform 300ms ease}
+[data-gallery-dots]>button[aria-current="true"]::before{background:#F7F4EC;transform:scale(1.3)}
+[data-gallery]:not([data-multi]) [data-gallery-btn],[data-gallery]:not([data-multi]) [data-gallery-dots]{display:none}
+@media (hover:none){[data-gallery-btn]{display:none}}
+@media (prefers-reduced-motion:reduce){[data-gallery-track]{scroll-behavior:auto}}
+/* insigna „Powered by Netlify” injectată de Netlify la publicare */
+#nl-badge-frame{display:none !important}
 @keyframes orizontCue{0%{transform:scaleY(0);transform-origin:top}45%{transform:scaleY(1);transform-origin:top}55%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
 </style>
 <script src="./orizont-content.js"></script>
@@ -402,24 +420,33 @@ html[data-menu="open"] [data-r="burgerbot"]{transform:translateY(-6px) rotate(-4
 
     <div data-r="cards3" style="display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,2.6vw,40px);margin-top:clamp(56px,7vh,92px)">
       <article data-reveal="1" style="">
-        <div style="aspect-ratio:4/5;overflow:hidden;background:#E8E1D3">
-          <img data-cms-img="orizont-menu-1" alt="Ciorbă servită în bol, cu smântână și ardei iute" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block">
+        <div data-gallery="orizont-menu-1" data-alt="Ciorbă servită în bol, cu smântână și ardei iute" role="group" aria-roledescription="carusel" aria-label="Fotografii — Ciorbe" style="position:relative;aspect-ratio:4/5;overflow:hidden;background:#E8E1D3">
+          <div data-gallery-track="1"></div>
+          <button type="button" data-gallery-btn="prev" aria-label="Fotografia anterioară"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg></button>
+          <button type="button" data-gallery-btn="next" aria-label="Fotografia următoare"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg></button>
+          <div data-gallery-dots="1"></div>
         </div>
         <h3 style="margin:26px 0 10px;font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(24px,2.1vw,32px)">Ciorbe</h3>
         <p style="margin:0 0 14px;font-size:15px;line-height:1.65;color:var(--muted)">Burtă, rădăuțeană, țărănească de vacuță. Pâine, smântână și ardei iute incluse.</p>
         <sc-if value="{{ showPrices }}" hint-placeholder-val="{{ true }}"><div style="font-size:13px;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent)">25 — 32 lei</div></sc-if>
       </article>
       <article data-reveal="1" style="">
-        <div style="aspect-ratio:4/5;overflow:hidden;background:#E8E1D3">
-          <img data-cms-img="orizont-menu-2" alt="Pizza cu blat subțire, tăiată felii" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block">
+        <div data-gallery="orizont-menu-2" data-alt="Pizza cu blat subțire, tăiată felii" role="group" aria-roledescription="carusel" aria-label="Fotografii — Pizza &amp; paste" style="position:relative;aspect-ratio:4/5;overflow:hidden;background:#E8E1D3">
+          <div data-gallery-track="1"></div>
+          <button type="button" data-gallery-btn="prev" aria-label="Fotografia anterioară"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg></button>
+          <button type="button" data-gallery-btn="next" aria-label="Fotografia următoare"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg></button>
+          <div data-gallery-dots="1"></div>
         </div>
         <h3 style="margin:26px 0 10px;font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(24px,2.1vw,32px)">Pizza &amp; paste</h3>
         <p style="margin:0 0 14px;font-size:15px;line-height:1.65;color:var(--muted)">Zece rețete de pizza, de la Margherita la Crudo e rucola. Paste cu creveți și somon.</p>
         <sc-if value="{{ showPrices }}" hint-placeholder-val="{{ true }}"><div style="font-size:13px;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent)">25 — 52 lei</div></sc-if>
       </article>
       <article data-reveal="1" style="">
-        <div style="aspect-ratio:4/5;overflow:hidden;background:#E8E1D3">
-          <img data-cms-img="orizont-menu-3" alt="Papanași cu afine și smântână" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block">
+        <div data-gallery="orizont-menu-3" data-alt="Papanași cu afine și smântână" role="group" aria-roledescription="carusel" aria-label="Fotografii — Desert" style="position:relative;aspect-ratio:4/5;overflow:hidden;background:#E8E1D3">
+          <div data-gallery-track="1"></div>
+          <button type="button" data-gallery-btn="prev" aria-label="Fotografia anterioară"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg></button>
+          <button type="button" data-gallery-btn="next" aria-label="Fotografia următoare"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg></button>
+          <div data-gallery-dots="1"></div>
         </div>
         <h3 style="margin:26px 0 10px;font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(24px,2.1vw,32px)">Desert</h3>
         <p style="margin:0 0 14px;font-size:15px;line-height:1.65;color:var(--muted)">Papanași cu afine și smântână, clătite, tiramisu. Făcute în casă, în fiecare zi.</p>
@@ -610,6 +637,9 @@ class Component extends DCLogic {
     this.onScroll = () => this.paint();
     window.addEventListener("scroll", this.onScroll, { passive: true });
     this.paint();
+    document.addEventListener("click", this.onGalleryClick);
+    this.onGalleryScroll = (e) => { if (e.target.matches && e.target.matches("[data-gallery-track]")) this.paintGallery(e.target); };
+    document.addEventListener("scroll", this.onGalleryScroll, { capture: true, passive: true });
     setTimeout(() => { document.querySelectorAll("[data-heroimg]").forEach((el) => { el.style.transform = "scale(1)"; }); }, 120);
   }
   componentDidUpdate() { this.apply(); this.paintCms(); this.paintAlts(); }
@@ -622,6 +652,27 @@ class Component extends DCLogic {
     window.removeEventListener("orizont-content-change", this.onContent);
     window.removeEventListener("storage", this.onContent);
     clearInterval(this.cmsWait);
+    document.removeEventListener("click", this.onGalleryClick);
+    document.removeEventListener("scroll", this.onGalleryScroll, { capture: true });
+  }
+  // Fotografiile din galerii sunt construite de ORIZONT.paint; aici doar navigarea.
+  onGalleryClick = (e) => {
+    const ctrl = e.target.closest && e.target.closest("[data-gallery-btn], [data-gallery-go]");
+    if (!ctrl) return;
+    const track = ctrl.closest("[data-gallery]").querySelector("[data-gallery-track]");
+    const count = track.children.length;
+    if (!count) return;
+    const current = Math.round(track.scrollLeft / track.clientWidth);
+    const target = ctrl.hasAttribute("data-gallery-go")
+      ? Number(ctrl.getAttribute("data-gallery-go"))
+      : current + (ctrl.getAttribute("data-gallery-btn") === "next" ? 1 : -1);
+    track.scrollTo({ left: ((target + count) % count) * track.clientWidth });
+  };
+  paintGallery(track) {
+    const current = Math.round(track.scrollLeft / track.clientWidth);
+    track.closest("[data-gallery]").querySelectorAll("[data-gallery-go]").forEach((dot, n) => {
+      dot.setAttribute("aria-current", n === current ? "true" : "false");
+    });
   }
   paintCms() { if (window.ORIZONT) window.ORIZONT.paint(document); }
   paintAlts() {
