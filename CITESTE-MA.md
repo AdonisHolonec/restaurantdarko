@@ -57,9 +57,9 @@ Cheia trebuie scrisă exact — se alege din listă, nu se tastează.
    - `ADMIN_PASS` — o parolă lungă, dată proprietarului
 
    Până când sunt puse, `/admin/` rămâne blocat pentru toți — intenționat.
-4. **Domain management → Add a domain** → `restaurantdarko.site`, apoi instrucțiunile DNS.
+4. **Domain management → Add a domain** → `restaurantorizontarad.website`, apoi instrucțiunile DNS.
    Certificatul HTTPS se emite automat.
-5. În **sanity.io/manage → API → CORS origins** adăugați `https://restaurantdarko.site`
+5. În **sanity.io/manage → API → CORS origins** adăugați `https://restaurantorizontarad.website`
    (fără credentials). Fără acest pas, site-ul public nu poate citi conținutul din CMS.
 
 ## Adrese
