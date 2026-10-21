@@ -88,7 +88,10 @@ html[data-motion="off"] [data-pulse]{animation:none}
 /* --- adaptare pentru tabletă și telefon (nu se poate exprima inline) --- */
 @media (max-width:1060px){
   [data-r="menuwrap"]{grid-template-columns:minmax(0,1fr) !important;gap:34px !important}
-  [data-r="menuindex"]{position:static !important;flex-direction:row !important;flex-wrap:wrap !important;gap:10px 20px !important;max-height:none !important;overflow:visible !important;padding:0 0 28px !important;border-bottom:1px solid var(--line)}
+  [data-r="menuindex"]{position:static !important;display:grid !important;grid-template-columns:repeat(auto-fill,minmax(200px,1fr)) !important;gap:0 32px !important;max-height:none !important;overflow:visible !important;padding:0 !important;border-bottom:1px solid var(--line);counter-reset:cat}
+  [data-r="menuindex"]>a{display:flex;align-items:baseline;gap:12px;padding:13px 0;border-top:1px solid var(--line);font-size:15px !important;letter-spacing:0 !important;text-transform:none !important;color:var(--ink) !important;counter-increment:cat}
+  [data-r="menuindex"]>a:hover{color:var(--accent) !important}
+  [data-r="menuindex"]>a::before{content:counter(cat,decimal-leading-zero);flex:none;min-width:18px;font-size:11px;letter-spacing:0.08em;color:var(--accent);font-variant-numeric:tabular-nums}
 }
 @media (max-width:960px){
   [data-r="g12"]{grid-template-columns:minmax(0,1fr) !important}
@@ -123,7 +126,8 @@ html[data-motion="off"] [data-pulse]{animation:none}
   [data-r="foot"] h4{font-size:10px !important;letter-spacing:0.18em !important;margin-bottom:10px !important}
   [data-r="foot"] p{font-size:14px !important;line-height:1.6 !important}
   [data-r="foot"] p[style*="font-size:22px"]{font-size:19px !important}
-  [data-r="menuindex"]{gap:8px 16px !important;padding-bottom:22px !important}
+  [data-r="menuindex"]{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:0 18px !important}
+  [data-r="menuindex"]>a{gap:9px;font-size:14.5px !important}
 }
 @media (min-width:861px){[data-r="burger"]{display:none !important}}
 html[data-firma="empty"] [data-firma-row]{display:none}

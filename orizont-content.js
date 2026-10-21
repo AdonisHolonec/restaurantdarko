@@ -1,6 +1,6 @@
 (function () {
   var RAW = [
-      ["mic-dejun", "Mic dejun", "Servit de la 08:00", [
+      ["mic-dejun", "Mic dejun", "Servit de la 10:00", [
         ["Meniu ouă ochiuri cu bacon, roșii și telemea", "250 g", 25],
         ["Omletă cu cașcaval și ciuperci", "250 g", 25],
         ["Omletă cu cașcaval și șuncă", "250 g", 25],
