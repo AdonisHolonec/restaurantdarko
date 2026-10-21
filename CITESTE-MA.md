@@ -1,38 +1,72 @@
-# Folder pregătit pentru Netlify
+# Folder publicat pe Vercel
 
-Conține site-ul gata de publicat. Nu editați fișierele de aici — sunt generate din proiect;
+Conține site-ul public al restaurantului Orizont, găzduit pe Vercel la
+**https://restaurantorizontarad.website**. Nu editați fișierele de aici — sunt generate din proiect;
 modificările se fac în `Orizont Homepage.dc.html`, `Termeni si Confidentialitate.dc.html`
 și `Panou Administrare.dc.html`, apoi folderul se regenerează.
 
-> **Link-urile interne (`/`, `/admin/`, `/termeni-si-confidentialitate.html`) nu funcționează
-> în previzualizarea din proiect** — sunt adrese de site, corecte doar după publicare pe Netlify.
+> **Link-urile interne (`/`, `/admin/`, `/termeni-si-confidentialitate`) nu funcționează
+> în previzualizarea din proiect** — sunt adrese de site, corecte doar după publicare pe Vercel.
 > Pentru verificări locale folosiți fișierele originale din rădăcina proiectului.
 
-## ⚠ Fotografiile trebuie încărcate în Sanity ÎNAINTE de publicare
+## Cum este legat totul
 
-Fotografiile pe care le-ați pus în editor nu sunt fișiere în proiect — ele trăiesc în editorul de
-design. În site-ul public, cele 15 poziții de fotografie se alimentează din CMS. Dacă publicați
-înainte de a le încărca în Sanity, paginile apar cu locurile de fotografii goale.
+| Piesă | Unde | Ce face |
+|---|---|---|
+| Codul site-ului | GitHub: `AdonisHolonec/restaurantdarko`, ramura `main` | sursa pentru Vercel |
+| Găzduire | Vercel, proiectul `restaurantorizontarad` | publică automat fiecare `git push` pe `main` |
+| Conținut | Sanity, proiectul `bbf8md42`, dataset `production` | program, contact, meniu, fotografii |
+| Editor de conținut | https://restaurant-darko.sanity.studio | aici se fac modificările de conținut |
 
-Ordinea corectă: **Sanity mai întâi** (pașii 1–2), **Netlify după** (pasul 3).
+Site-ul este static (fără build): Vercel publică folderul așa cum este. Conținutul din Sanity se
+citește direct din browser, deci o modificare făcută în editor apare pe site fără republicare.
 
 ---
 
-## Pasul 1 — Sanity
+## Publicarea unei versiuni noi
 
 ```bash
-npm create sanity@latest -- --template clean --create-project "Restaurant Darko" --dataset production
-# copiați cms/sanity/schemaTypes/ peste folderul cu același nume din proiectul creat
-npx sanity deploy      # editor public: https://restaurant-darko.sanity.studio
+git add .
+git commit -m "descrierea modificării"
+git push origin main
 ```
 
-Import al meniului (20 categorii, 171 feluri) — vezi `PUBLICARE.md` din rădăcina proiectului.
+Vercel publică automat în câteva secunde. Istoricul publicărilor și revenirea la o versiune
+anterioară („Instant Rollback") sunt în **vercel.com → restaurantorizontarad → Deployments**.
 
-## Pasul 2 — Fotografiile
+Configurația de găzduire este în `vercel.json`:
+- `/termeni` → `/termeni-si-confidentialitate` (redirect 301);
+- adrese fără `.html` (`cleanUrls`);
+- headere de securitate pe toate paginile;
+- cache de un an pentru `/assets/` — la înlocuirea unei imagini de acolo, folosiți un nume nou de fișier;
+- `/admin/` nu este indexat de motoarele de căutare.
 
-În editorul Sanity, la **„Fotografie de pe site"**, creați un document pentru fiecare poziție.
-Încărcați aceleași fotografii pe care le-ați pus în editorul de design (le aveți pe calculator);
-Sanity le redimensionează automat pentru web.
+## Domeniul
+
+`restaurantorizontarad.website` este administrat de Vercel (DNS și certificat HTTPS automate).
+`www.restaurantorizontarad.website` redirecționează către adresa fără `www`.
+
+Dacă domeniul se schimbă vreodată:
+1. **Vercel → restaurantorizontarad → Settings → Domains** → adăugați domeniul nou.
+2. În `index.html`, `sitemap.xml` și `robots.txt`, înlocuiți adresa veche cu cea nouă.
+3. În **sanity.io/manage → bbf8md42 → API → CORS origins** adăugați noul domeniu
+   (fără credentials). **Fără acest pas, site-ul apare fără meniu, program și fotografii.**
+
+Adrese CORS actuale: `https://restaurantorizontarad.website`, `https://restaurantorizontarad.vercel.app`
+și `http://localhost:3333` (editorul Sanity rulat local).
+
+---
+
+## Conținutul din Sanity
+
+Schema conținutului este în `cms/sanity/schemaTypes/`. După o modificare a schemei, copiați folderul
+în proiectul Sanity Studio și rulați `npx sanity deploy`. Meniul inițial (20 categorii, 171 feluri)
+se poate reimporta cu `cms/seed.mjs` — vezi `cms/README.md`.
+
+### Fotografiile
+
+În editorul Sanity, la **„Fotografie de pe site"**, există câte un document pentru fiecare poziție.
+Sanity redimensionează automat fotografiile pentru web.
 
 Cele 15 poziții folosite în pagină:
 
@@ -42,33 +76,16 @@ Cele 15 poziții folosite în pagină:
 | `orizont-dish-1` … `-3` | semnăturile casei: sarmale, berbecuț, creveți |
 | `orizont-platou-1` … `-3` | platouri: haiducesc, al casei, tava Orizont |
 | `orizont-atm-1` … `-4` | atmosferă: sala dimineața, terasa, sala seara, bucătăria |
-| `orizont-menu-1` … `-3` | meniu: ciorbe, pizza, desert |
+| `orizont-menu-1` … `-3` | meniu: ciorbe, pizza, desert — caruseluri, pot avea mai multe fotografii |
 | `orizont-rezervare` | secțiunea de rezervări |
 
-Cheia trebuie scrisă exact — se alege din listă, nu se tastează.
-
-## Pasul 3 — Netlify
-
-1. În `index.html`, înlocuiți `INLOCUIESTE_CU_ID_SANITY` cu id-ul proiectului Sanity
-   (o singură apariție, în `<head>`). Spuneți-mi id-ul și o fac eu.
-2. Cont gratuit pe netlify.com → **Add new site → Deploy manually**, trageți **acest folder**.
-3. **Site configuration → Environment variables**:
-   - `ADMIN_USER` — ex. `orizont`
-   - `ADMIN_PASS` — o parolă lungă, dată proprietarului
-
-   Până când sunt puse, `/admin/` rămâne blocat pentru toți — intenționat.
-4. **Domain management → Add a domain** → `restaurantorizontarad.website`, apoi instrucțiunile DNS.
-   Certificatul HTTPS se emite automat.
-5. În **sanity.io/manage → API → CORS origins** adăugați `https://restaurantorizontarad.website`
-   (fără credentials). Fără acest pas, site-ul public nu poate citi conținutul din CMS.
+Cheia trebuie scrisă exact — se alege din listă, nu se tastează. Pentru o fotografie în plus într-un
+carusel, creați încă un document cu aceeași cheie; câmpul `ordine` stabilește ordinea.
 
 ## Adrese
 
 | Adresă | Ce este |
 |---|---|
 | `/` | Prima pagină |
-| `/termeni-si-confidentialitate.html` (sau `/termeni`) | Informații legale |
-| `/admin/` | Panou de administrare — cere utilizator și parolă |
-
-Panoul publicat administrează programul, contactul, datele firmei și meniul.
-Fotografiile se administrează doar din Sanity.
+| `/termeni-si-confidentialitate` (sau `/termeni`) | Informații legale |
+| `/admin/` | Deschide editorul Sanity — cere autentificare cu contul Sanity |
