@@ -96,6 +96,8 @@ html[data-motion="off"] [data-pulse]{animation:none}
 @media (max-width:960px){
   [data-r="g12"]{grid-template-columns:minmax(0,1fr) !important}
   [data-r="g12"]>*{grid-column:auto !important}
+  [data-r="platoufoto"]{height:auto !important;background:transparent !important}
+  [data-r="platoufoto"]>img{height:auto !important;max-height:85svh;object-fit:contain !important}
   [data-r="two"]{grid-template-columns:minmax(0,1fr) !important;gap:30px !important}
   [data-r="cards3"],[data-r="cols4"],[data-r="foot"]{grid-template-columns:repeat(2,minmax(0,1fr)) !important}
   [data-r="navrow"]{gap:24px !important}
@@ -332,7 +334,7 @@ html[data-menu="open"] [data-r="burgerbot"]{transform:translateY(-6px) rotate(-4
       <h2 style="margin:0;font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(40px,6.4vw,104px);line-height:0.98;letter-spacing:-0.025em;max-width:16ch;color:#F7F4EC">Pentru <em style="font-style:italic;color:#E8A879">șase</em> oameni. Sau pentru o <em style="font-style:italic;color:#E8A879">seară întreagă</em>.</h2>
     </div>
 
-    <div data-reveal="1" style="margin-top:clamp(60px,8vh,100px);height:clamp(400px,64vh,720px);overflow:hidden;background:#1A1F24">
+    <div data-reveal="1" data-r="platoufoto" style="margin-top:clamp(60px,8vh,100px);height:clamp(400px,64vh,720px);overflow:hidden;background:#1A1F24">
       <img data-cms-img="orizont-platou-1" alt="Platou haiducesc de cinci kilograme, cu grătar, sarmale și garnituri" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block">
     </div>
 
@@ -346,7 +348,7 @@ html[data-menu="open"] [data-r="burgerbot"]{transform:translateY(-6px) rotate(-4
 
     <div data-r="g12" style="display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(28px,3vw,48px);margin-top:clamp(56px,7vh,88px);align-items:start">
       <div data-reveal="1" style="grid-column:span 6">
-        <div style="height:clamp(280px,38vh,440px);overflow:hidden;background:#1A1F24">
+        <div data-r="platoufoto" style="height:clamp(280px,38vh,440px);overflow:hidden;background:#1A1F24">
           <img data-cms-img="orizont-platou-2" alt="Platoul casei — grătar mixt pentru patru persoane" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block">
         </div>
         <div style="display:flex;justify-content:space-between;align-items:baseline;gap:24px;margin-top:24px;padding-top:20px;border-top:1px solid rgba(245,241,232,0.16)">
@@ -358,7 +360,7 @@ html[data-menu="open"] [data-r="burgerbot"]{transform:translateY(-6px) rotate(-4
         </div>
       </div>
       <div data-reveal="1" style="grid-column:span 6">
-        <div style="height:clamp(280px,38vh,440px);overflow:hidden;background:#1A1F24">
+        <div data-r="platoufoto" style="height:clamp(280px,38vh,440px);overflow:hidden;background:#1A1F24">
           <img data-cms-img="orizont-platou-3" alt="Tava Orizont — ceafă de porc, cartofi și salată, pentru două persoane" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block">
         </div>
         <div style="display:flex;justify-content:space-between;align-items:baseline;gap:24px;margin-top:24px;padding-top:20px;border-top:1px solid rgba(245,241,232,0.16)">
